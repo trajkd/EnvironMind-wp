@@ -1,0 +1,19 @@
+.selectric {
+	height: 80px;
+	background: #fff;
+}
+
+.selectric .label {
+	height: 80px;
+	line-height: 80px;
+	font-size: 22px;
+}
+
+.selectric .button {
+	height: 80px;
+	background-color: #fff;
+}
+
+.selectric-items ul, .selectric-items li {
+	font-size: 20px;
+}

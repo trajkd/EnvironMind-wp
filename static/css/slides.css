@@ -1,0 +1,294 @@
+#welcome-explore {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  line-height: 1.2;
+}
+
+#welcome-content {
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: black;
+  font-size: 2vw;
+}
+
+#welcome-message {
+  font-size: 3vw;
+}
+
+#crowdsourcing {
+  font-size: 4vw;
+}
+
+#zero-explore {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-content: start;
+  background-color: #f1f0e3;
+  font-size: 2vw;
+  line-height: 1.2;
+}
+
+#start-content-internal {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  align-content: start;
+  background-color: #f1f0e3;
+}
+
+#start-content {
+  padding: 20px;
+}
+
+#start-spacing, #publish-spacing, #design-spacing, #attract-spacing, #build-spacing, #showcase-spacing {
+  background-color: white;
+}
+
+#start-zero {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  color: #d9d9d9;
+  font-size: 6vw;
+  font-weight: 900;
+  background-color: white;
+  align-self: stretch;
+  padding-left: 0;
+}
+
+.vertical {
+  padding: 40px;
+  font-size: 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #d9d9d9;
+  font-weight: 900;
+  background-color: white;
+}
+
+.vertical span {
+  transform: rotate(-90deg);
+}
+
+#toughest-step {
+  font-size: 3vw;
+}
+
+#toughest-start {
+  font-size: 5vw;
+}
+
+.the-idea {
+  padding: 0 10px;
+}
+
+.greennen {
+  color: #6aa84f;
+}
+
+#ideaintoreality {
+  font-size: 4vw;
+}
+
+#one-explore, #two-explore, #three-explore, #four-explore, #five-explore, #six-explore {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  align-content: start;
+  background-color: #f1f0e3;
+  font-size: 2vw;
+  line-height: 1.2;
+}
+
+#start-one, #publish-two, #design-three, #attract-four, #build-five, #showcase-six {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  color: #d9d9d9;
+  font-size: 6vw;
+  font-weight: 900;
+  background-color: white;
+  align-self: stretch;
+  padding-left: 0;
+}
+
+#start-one-content-internal, #publish-two-content-internal, #design-three-content-internal, #build-five-content-internal, #showcase-six-content-internal {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto 1fr 1fr;
+  align-content: start;
+  background-color: #f1f0e3;
+}
+
+#start-one-content-internal .content-internal-title .MM {
+  font-family: 'BlairMdITC TT';
+  overflow: visible;
+  letter-spacing: -0.8vw;
+}
+
+#start-one-content-internal .content-internal-description .MM {
+  font-family: 'BlairMdITC TT';
+  overflow: visible;
+  letter-spacing: -0.7vw;
+}
+
+#publish-two-content-internal .content-internal-description .MM {
+  font-family: 'BlairMdITC TT';
+  overflow: visible;
+  letter-spacing: -0.8vw;
+}
+
+#design-three-content-internal .content-internal-description .MM {
+  font-family: 'BlairMdITC TT';
+  overflow: visible;
+  letter-spacing: -0.7vw;
+}
+
+#build-five-content-internal .content-internal-description .MM {
+  font-family: 'BlairMdITC TT';
+  overflow: visible;
+  letter-spacing: -0.8vw;
+}
+
+#showcase-six-content-internal .content-internal-description .MM {
+  font-family: 'BlairMdITC TT';
+  overflow: visible;
+  letter-spacing: -0.7vw;
+}
+
+.content-internal-step {
+  font-size: 3.4vw;
+  padding: 10px 0;
+  padding-right: 10px;
+}
+
+.content-internal-title {
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+#attract-four-content-internal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  line-height: 50px;
+}
+
+#matchmaking {
+  font-size: 3vw;
+}
+
+#mm-platform {
+  font-family: 'BlairMdITC TT';
+  font-size: 5vw;
+  align-self: center;
+  letter-spacing: -1.8vw;
+  margin-left: 12px;
+}
+
+#mm-is-the-right-platform {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 3vw;
+}
+
+#showcase-six-content-internal .ME {
+  font-family: 'BlairMdITC TT';
+}
+
+#aboutmm {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  align-content: start;
+  margin-top: 180px;
+  background-color: #f1f0e3;
+  font-size: 2vw;
+  line-height: 1.2;
+}
+
+#aboutmm-aim .MM {
+  font-family: 'BlairMdITC TT';
+  letter-spacing: -10.7px;
+}
+
+@media only screen and (min-width: 992px) {
+  #aboutmm {
+    margin-top: 200px;
+    margin-left: 96px;
+  }
+  #welcome-explore, #zero-explore, #one-explore, #two-explore, #three-explore, #four-explore, #five-explore, #six-explore{
+    margin-left: 96px;
+  }
+}
+
+#aboutmm-title {
+  font-size: 5vw;
+  align-self: end;
+  padding-bottom: 40px;
+  padding-left: 10px;
+}
+
+#aboutmm-title .MM {
+  font-family: 'BlairMdITC TT';
+  letter-spacing: -1.8vw;
+}
+
+#aboutmm-location .MM {
+  font-family: 'BlairMdITC TT';
+  letter-spacing: -0.7vw;
+  padding-bottom: 10px;
+}
+
+#aboutmm-aim {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  padding-right: 10px;
+}
+
+#aboutmm-idea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+#aboutmm-aplacewhere {
+  justify-self: end;
+  align-self: center;
+  padding-right: 2vw;
+}
+
+#aboutmm-investors {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 4vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+#aboutmm-come {
+  justify-self: start;
+  align-self: center;
+  padding-left: 2vw;
+}
+
+.redden-slides {
+  color: #243e8e;
+}

@@ -1,0 +1,157 @@
+$selectClass: select;
+$selectricClass: selectric;
+
+.#{$selectClass} {
+	select:invalid + .#{$selectClass}__label {
+
+	}
+	@extend .pos-rel;
+	height: 80px;
+	@extend .full-height;
+
+	&__icon {
+		@extend .font-size-xxl;
+		left: 30px;
+		&.icon-arrow-down {
+			@extend .font-size-lg;
+			transition: transform 0.35s ease-out;
+		}
+	}
+
+	&__label {
+		@extend .selection-events-none;
+		@extend .full-pos-abs;
+		@extend .display-flex;
+		@extend .flex-v-center;
+		@extend .h-spacer-1;
+
+		label {
+			@extend .pos-rel;
+			@extend .l-spacer-025;
+			top: -20px;
+			left: 0px;
+			@extend .lg-font-size-xs;
+			transition: all 0.15s ease-out;
+			@extend .flex-1;
+		}
+	}
+
+	&__error {
+		@extend .display-none;
+		@extend .color-red;
+		font-weight: bold;
+	}
+
+
+	.#{$selectricClass} {
+		@extend .full-height;
+		@extend .bg-color-white;
+		@extend .border-all;
+		@extend .border-color-grey-lighter;
+		&-wrapper {
+			@extend .full-height;
+			&.is-empty:not(.#{$selectricClass}-open) {
+				+ .#{$selectClass}__label {
+					label {
+						top: 0;
+						left: 0;
+						@extend .lg-font-size-md;
+					}
+				}
+			}
+		}
+		.label {
+			@extend .full-height;
+			@extend .display-flex;
+			@extend .flex-v-center;
+			padding-left: 27px;
+			@extend .font-size-sm;
+			@extend .lg-font-size-md;
+		}
+
+		.button {
+			@extend .display-none;
+		}
+
+		&-items {
+			@extend .bg-color-white;
+
+			ul {
+				li {
+					@extend .font-size-sm;
+				}
+				li:not(.disabled) {
+					@extend .txt-center;
+					@extend .border-bottom;
+					@extend .border-color-grey-lighter;
+					@extend .v-spacer-05;
+					&:hover,
+					&.selected {
+						@extend .border-color-orange;
+						@extend .bg-color-grey-light;
+					}
+				}
+				li.disabled {
+					@extend .display-none;
+				}
+			}
+		}
+
+		/* open state */
+		&-open.is-empty {
+			+ .#{$selectClass}__label {
+				label {
+					top: -20px;
+					left: 0;
+					@extend .lg-font-size-xs;
+				}
+			}
+		}
+		&-open {
+			+ .#{$selectClass}__label {
+				z-index: 10001;
+				.icon-arrow-down {
+					transform: rotateZ(-180deg);
+				}
+			}
+		}
+
+		// invalid style
+		&-wrapper.is-invalid {
+			border: 1px solid red;
+			~ .select__error {
+				@extend .display-block;
+			}
+		}
+
+		&-disabled {
+			+ .select__label {
+				opacity: 0.35;
+			}
+		}
+
+	}
+
+	&--small {
+		height: 44px;
+
+		.selectric {
+			.label {
+				padding-left: 0;
+				margin-left: 20px;
+				margin-right:60px;
+			}
+		}
+
+		.#{$selectClass} {
+			&__label {
+				@extend .r-spacer-05;
+			}
+			&__icon {
+				@extend .color-orange;
+			}
+		}
+	}
+
+
+}

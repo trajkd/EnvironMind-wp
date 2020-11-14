@@ -1,0 +1,245 @@
+$bodyPaddingTopDesktop: 100px;
+$bodyPaddingTopMobile: 90px;
+
+$shrinkedBodyPaddingTop: 72px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    @extend .font-family-default;
+    font-size: 16px;
+    @extend .full-height;
+}
+
+body {
+    padding-top: $bodyPaddingTopMobile;
+    min-width: 320px;
+    @extend .line-height-md;
+    @extend .color-grey;
+    @extend .bg-color-beige-light;
+    min-width: 320px;
+    // min-height: 100vh;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    @include media-breakpoint-up(lg) {
+        padding-top: $bodyPaddingTopDesktop;
+    }
+    @extend .font-size-sm;
+    @extend .line-height-md;
+    &.shrinkedMenu {
+        padding-top: $shrinkedBodyPaddingTop;
+    }
+}
+
+a,
+button {
+    text-decoration: none;
+    color: #212529;
+    @extend .font-family-default;
+    &:active {
+        outline: 0;
+    }
+    &:focus {
+        outline-color: map-get($colors, 'orange');
+    }
+}
+
+.form-control {
+    &:focus {
+        box-shadow: none;
+        outline: 1px solid map-get($colors, 'orange');
+    }
+}
+
+a {
+    transition: color 0.25s ease-out;
+    @include media-breakpoint-up(lg) {
+        &:hover {
+            color: map-get($colors, 'orange');
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .font-family-titles;
+    @extend .sm-line-height-sm;
+    @extend .line-height-sm;
+    // letter-spacing: 1;
+}
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.cms-page ul li {
+    @extend .pos-rel;
+    &::before {
+        content: ' - ';
+    }
+}
+
+h1 {
+    @extend .font-size-xxl2;
+    @extend .md-font-size-huge;
+}
+
+.as-heading {
+    @extend .font-family-titles;
+}
+
+h2,
+h3 {
+    @extend .font-size-xxl2;
+    @extend .md-font-size-xxxl;
+}
+
+.as-heading:not([class*='font-size']) {
+    @extend .font-size-xxl2;
+    @extend .md-font-size-xxxl;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    @extend .cursor-pointer;
+    letter-spacing: 1px;
+    font-size: inherit;
+}
+
+p + p {
+    @extend .t-spacer-05;
+}
+
+/**
+ * Layout
+ */
+.icon {
+    @extend .display-inline-block;
+    @extend .v-align-middle;
+    // @extend .line-height-xs;
+}
+
+.container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+    // arrivo a 1200px: ho un padding laterale dinamico in base alla larghezza della viewport
+    @include media-breakpoint-up(xl) {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+    // arrivo a 1600px: si blocca il layout e ho un padding laterale di 60px
+    @media (min-width: map-get($layout, max-width)) {
+        max-width: map-get($layout, max-width);
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+fieldset {
+    border: 0;
+}
+
+main {
+    @extend .display-block;
+}
+/*
+** Utility classes
+*/
+.box-top-shadow {
+    &::before {
+        content: '';
+        @extend .pos-abs;
+        @extend .pos-top;
+        @extend .pos-left;
+        @extend .display-block;
+        @extend .full-width;
+        @extend .z-index-1;
+        height: 50%;
+        pointer-events: none;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.72) 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
+    }
+}
+
+.box-bottom-shadow {
+    &::before {
+        content: '';
+        @extend .pos-abs;
+        @extend .pos-bottom;
+        @extend .pos-left;
+        @extend .display-block;
+        @extend .full-width;
+        @extend .z-index-1;
+        height: 50%;
+        pointer-events: none;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
+    }
+}
+
+.border-width-3 {
+    border-width: 3px !important;
+}
+
+.outline-none {
+    &:focus {
+        outline: none !important;
+    }
+}
+
+.partners-img {
+    @include media-breakpoint-down(md) {
+        flex: 0 0 100%;
+    }
+    picture {
+        @extend .display-flex;
+        @extend .flex-center;
+        img {
+            height: auto;
+            width: auto;
+            max-height: 60px;
+        }
+    }
+}
+
+.product-sticky-preview {
+    picture {
+        text-align: center;
+        img {
+            max-height: 335px;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.js-no-china {
+    display: none;
+}
+// .pinned-section {
+//     .sm-t-spacer-neg-48 {
+//         @include media-breakpoint-up(sm) {
+//             margin-top: -250px;
+//         }
+//     }
+// }

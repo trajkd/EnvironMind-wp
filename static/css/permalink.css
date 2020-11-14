@@ -1,0 +1,12 @@
+/* Change this for hover color of social buttons */
+a:focus, a:hover {
+	color: #ff0007;
+}
+
+#mainNav .navbar-nav > li.nav-item > a {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}

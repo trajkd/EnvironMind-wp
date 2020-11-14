@@ -1,0 +1,93 @@
+/**
+ * Background
+ */
+@mixin bg($prefix: '') {
+	@each $label, $value in $colors {
+
+		.#{$prefix}bg-color-#{$label} {
+			background-color: $value;
+		}
+
+	}
+	.#{$prefix}bg-pos-center {
+		background-position: center center;
+	}
+
+	.#{$prefix}bg-color-transparent {
+		background-color: transparent;
+	}
+
+	.#{$prefix}bg-no-repeat {
+		background-repeat: no-repeat;
+	}
+
+	.#{$prefix}bg-cover {
+		background-size: cover;
+		@extend .#{$prefix}bg-no-repeat;
+		@extend .#{$prefix}bg-pos-center;
+	}
+
+	.#{$prefix}bg-contain {
+		background-size: contain;
+		@extend .#{$prefix}bg-no-repeat;
+		@extend .#{$prefix}bg-pos-center;
+	}
+
+	.#{$prefix}bg-pos-left-top {
+		background-position: left top;
+	}
+
+	.#{$prefix}bg-pos-center-top {
+		background-position: center top;
+	}
+
+	.#{$prefix}bg-pos-right-top {
+		background-position: right top;
+	}
+
+	.#{$prefix}bg-pos-left-center {
+		background-position: left center;
+	}
+
+	.#{$prefix}bg-pos-right-center {
+		background-position: right center;
+	}
+
+	.#{$prefix}bg-pos-left-bottom {
+		background-position: left bottom;
+	}
+
+	.#{$prefix}bg-pos-center-bottom {
+		background-position: center bottom;
+	}
+
+	.#{$prefix}bg-pos-right-bottom {
+		background-position: right bottom;
+	}
+
+	.#{$prefix}bg-black-overlay-05,
+	.#{$prefix}bg-black-overlay-07 {
+		z-index: 0;
+		position: relative;
+
+		&:after {
+			content: '';
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+		}
+	}
+
+	.#{$prefix}bg-black-overlay-03 {
+		@include alpha-overlay(black, .3);
+	}
+
+	.#{$prefix}bg-black-overlay-07 {
+		@include alpha-overlay(black, .7);
+	}
+}
+
+@include bg();

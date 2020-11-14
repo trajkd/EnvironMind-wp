@@ -1,0 +1,268 @@
+:root {
+	--main-color-hue: 182;
+	--main-color-saturation: 60%;
+	--main-color-lightness: 50%;
+	--main-color: hsl(var(--main-color-hue), var(--main-color-saturation), var(--main-color-lightness));
+	--main-color-alpha10: hsla(var(--main-color-hue), var(--main-color-saturation), var(--main-color-lightness), 0.1);
+	--main-color-alpha20: hsla(var(--main-color-hue), var(--main-color-saturation), var(--main-color-lightness), 0.2);
+	--main-color-alpha30: hsla(var(--main-color-hue), var(--main-color-saturation), var(--main-color-lightness), 0.3);
+	--main-color-alpha40: hsla(var(--main-color-hue), var(--main-color-saturation), var(--main-color-lightness), 0.4);
+	--main-color-alpha60: hsla(var(--main-color-hue), var(--main-color-saturation), var(--main-color-lightness), 0.6);
+	--main-color-alpha70: hsla(var(--main-color-hue), var(--main-color-saturation), var(--main-color-lightness), 0.7);
+	--main-color-alpha80: hsla(var(--main-color-hue), var(--main-color-saturation), var(--main-color-lightness), 0.8);
+	--main-color-lightest: hsl(var(--main-color-hue), var(--main-color-saturation), 95%);
+	--main-color-lighter: hsl(var(--main-color-hue), var(--main-color-saturation), 90%);
+	--main-color-light: hsl(var(--main-color-hue), var(--main-color-saturation), 65%);
+	--main-color-dark: hsl(var(--main-color-hue), var(--main-color-saturation), 40%);
+	--main-color-dark-alpha20: hsla(var(--main-color-hue), var(--main-color-saturation), 40%, 0.2);
+	--main-color-dark-alpha30: hsla(var(--main-color-hue), var(--main-color-saturation), 40%, 0.3);
+	--main-color-dark-alpha40: hsla(var(--main-color-hue), var(--main-color-saturation), 40%, 0.4);
+	--main-color-darker: hsl(var(--main-color-hue), var(--main-color-saturation), 27%);
+	--main-color-darker-alpha20: hsla(var(--main-color-hue), var(--main-color-saturation), 27%, 0.2);
+	--main-color-darker-alpha30: hsla(var(--main-color-hue), var(--main-color-saturation), 27%, 0.3);
+	--main-color-darker-alpha50: hsla(var(--main-color-hue), var(--main-color-saturation), 27%, 0.5);
+	--main-color-darkest: hsl(var(--main-color-hue), var(--main-color-saturation), 20%);
+	--secondary-color-hue: 340;
+	--secondary-color-saturation: 80%;
+	--secondary-color-lightness: 60%;
+	--secondary-color: hsl(var(--secondary-color-hue), var(--secondary-color-saturation), var(--secondary-color-lightness));
+	--secondary-color-alpha15: hsla(var(--secondary-color-hue), var(--secondary-color-saturation), var(--secondary-color-lightness), 0.15);
+	--secondary-color-alpha20: #ffdbe8;
+	--secondary-color-alpha30: hsla(var(--secondary-color-hue), var(--secondary-color-saturation), var(--secondary-color-lightness), 0.3);
+	--secondary-color-alpha40: hsla(var(--secondary-color-hue), var(--secondary-color-saturation), var(--secondary-color-lightness), 0.4);
+	--secondary-color-alpha50: hsla(var(--secondary-color-hue), var(--secondary-color-saturation), var(--secondary-color-lightness), 0.5);
+	--secondary-color-alpha70: hsla(var(--secondary-color-hue), var(--secondary-color-saturation), var(--secondary-color-lightness), 0.6);
+	--secondary-color-alpha80: hsla(var(--secondary-color-hue), var(--secondary-color-saturation), var(--secondary-color-lightness), 0.8);
+	--secondary-color-lightest: #ffdbe8;
+	--secondary-color-darken5: hsl(var(--secondary-color-hue), var(--secondary-color-saturation), 55%);
+	--secondary-color-dark: hsl(var(--secondary-color-hue), var(--secondary-color-saturation), 50%);
+	--dark-color-hue: 220;
+	--dark-color-saturation: 20%;
+	--dark-color-lightness: 20%;
+	--dark-color-light-lightness: 30%;
+	--dark-color-dark-lightness: 14%;
+	--dark-color: hsl(var(--dark-color-hue), var(--dark-color-saturation), var(--dark-color-lightness));
+	--dark-color-light: hsl(var(--dark-color-hue), var(--dark-color-saturation), var(--dark-color-light-lightness));
+	--dark-color-dark: hsl(var(--dark-color-hue), var(--dark-color-saturation), var(--dark-color-dark-lightness));
+	--blue: #278acd;
+	--red: #dc2c00;
+	--yellow-hue: 37;
+	--yellow-saturation: 100%;
+	--yellow-lightness: 65%;
+	--yellow: hsl(var(--yellow-hue), var(--yellow-saturation), var(--yellow-lightness));
+	--yellow-alpha30: hsla(var(--yellow-hue), var(--yellow-saturation), var(--yellow-lightness), 0.3);
+	--yellow-dark: hsl(var(--yellow-hue), var(--yellow-saturation), 55%);
+	--yellow-dark-alpha30: hsla(var(--yellow-hue), var(--yellow-saturation), 55%, 0.3);
+	--yellow-lightest: #ffeccb;
+	--green: #57cb72;
+	--green-alpha15: rgba(87, 203, 114, .15);
+	--green-dark: #38b756;
+	--danger-color: var(--secondary-color);
+	--info-color: var(--yellow-lightest);
+	--success-color: var(--green);
+	--warning-color: var(--yellow);
+	--black-hue: 0;
+	--black-saturation: 0%;
+	--black: hsl(var(--black-hue), var(--black-saturation), 0%);
+	--black-alpha10: hsla(var(--black-hue), var(--black-saturation), 0%, 0.1);
+	--black-alpha12: hsla(var(--black-hue), var(--black-saturation), 0%, 0.12);
+	--black-alpha14: hsla(var(--black-hue), var(--black-saturation), 0%, 0.14);
+	--black-alpha15: hsla(var(--black-hue), var(--black-saturation), 0%, 0.15);
+	--black-alpha20: hsla(var(--black-hue), var(--black-saturation), 0%, 0.2);
+	--black-alpha30: hsla(var(--black-hue), var(--black-saturation), 0%, 0.3);
+	--black-alpha40: hsla(var(--black-hue), var(--black-saturation), 0%, 0.4);
+	--black-alpha50: hsla(var(--black-hue), var(--black-saturation), 0%, 0.5);
+	--black-alpha60: hsla(var(--black-hue), var(--black-saturation), 0%, 0.6);
+	--black-alpha70: hsla(var(--black-hue), var(--black-saturation), 0%, 0.7);
+	--black-alpha80: hsla(var(--black-hue), var(--black-saturation), 0%, 0.8);
+	--black-alpha90: hsla(var(--black-hue), var(--black-saturation), 0%, 0.9);
+	--white-hue: 0;
+	--white-saturation: 0%;
+	--white: hsl(var(--white-hue), var(--white-saturation), 100%);
+	--white-alpha10: hsla(var(--white-hue), var(--white-saturation), 100%, 0.1);
+	--white-alpha20: hsla(var(--white-hue), var(--white-saturation), 100%, 0.2);
+	--white-alpha30: hsla(var(--white-hue), var(--white-saturation), 100%, 0.3);
+	--white-alpha40: hsla(var(--white-hue), var(--white-saturation), 100%, 0.4);
+	--white-alpha50: hsla(var(--white-hue), var(--white-saturation), 100%, 0.5);
+	--white-alpha60: hsla(var(--white-hue), var(--white-saturation), 100%, 0.6);
+	--white-alpha70: hsla(var(--white-hue), var(--white-saturation), 100%, 0.7);
+	--white-alpha80: hsla(var(--white-hue), var(--white-saturation), 100%, 0.8);
+	--white-alpha90: hsla(var(--white-hue), var(--white-saturation), 100%, 0.9);
+	--grey-lightest: #fafafa;
+	--grey-lighter: #f1f1f1;
+	--grey-light: #e5e5e5;
+	--grey: #d1d1d1;
+	--grey-alpha20: hsla(0, 0%, 82%, .2);
+	--grey-alpha30: hsla(0, 0%, 82%, .3);
+	--grey-dark: #8f9092;
+	--grey-darker: #626262;
+	--grey-darker-alpha15: rgba(98, 98, 98, .15);
+	--grey-darkest: #333;
+	--grey-darkest-alpha20: rgba(51, 51, 51, .2);
+	--grey-darkest-alpha30: rgba(51, 51, 51, .3);
+	--grey-darkest-alpha50: rgba(51, 51, 51, .5);
+	--grey-darkest-alpha70: rgba(51, 51, 51, .7);
+	--grey-darkest-alpha75: rgba(51, 51, 51, .75);
+	--color-live: var(--secondary-color);
+	--color-live-lightest: var(--secondary-color-lightest);
+	--color-starting: var(--yellow);
+	--color-starting-alpha20: rgba(255, 185, 74, .2);
+	--color-starting-alpha30: rgba(255, 185, 74, .3);
+	--color-starting-alpha40: rgba(255, 185, 74, .4);
+	--color-starting-alpha50: rgba(255, 185, 74, .5);
+	--color-starting-alpha70: rgba(255, 185, 74, .7);
+	--color-starting-lightest: var(--yellow-lightest);
+	--color-replay: var(--grey-darkest);
+	--color-replay-alpha30: var(--grey-darkest-alpha30);
+	--color-replay-alpha70: var(--grey-darkest-alpha70);
+	--color-replay-lightest: var(--grey-light);
+	--tck-color-1: #34495e;
+	--tck-color-2: #5ece8d;
+	--tck-color-3: #1abc9c;
+	--tck-color-4: #16a085;
+	--tck-color-5: #6c8687;
+	--tck-color-6: #f1c40f;
+	--tck-color-7: #e67e22;
+	--tck-color-8: #cf4b04;
+	--tck-color-9: #6cc0d3;
+	--tck-color-10: #6fabd3;
+	--tck-color-11: #278acd;
+	--tck-color-12: #0c639e;
+	--global-radius: 3px;
+	--menu-height: 70px;
+	--vertical-menu-width: 90px;
+	--rem-size-8: 0.5rem;
+	--rem-size-10: 0.625rem;
+	--rem-size-12: 0.75rem;
+	--rem-size-13: 0.8125rem;
+	--rem-size-14: 0.875rem;
+	--rem-size-15: 0.9375rem;
+	--rem-size-16: 1rem;
+	--rem-size-18: 1.125rem;
+	--rem-size-20: 1.25rem;
+	--rem-size-22: 1.375rem;
+	--rem-size-24: 1.5rem;
+	--rem-size-25: 1.5625rem;
+	--rem-size-28: 1.75rem;
+	--rem-size-32: 2rem;
+	--rem-size-35: 2.1875rem;
+	--title-font-family: "Kreon", serif;
+	--text-font-family: "Roboto", sans-serif;
+	--quote-font-family: Arial, sans-serif;
+	--ideacons-font: "ideation-icons";
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-bold: 700
+}
+
+.idt-chat {
+	display: flex;
+	flex-direction: row-reverse;
+	width: 100%;
+	height: 1rem
+}
+
+@media only screen and (max-width:639px) {
+	.idt-chat {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10
+	}
+}
+
+@media only screen and (min-width:640px) {
+	.idt-chat {
+		flex: 1 1 auto;
+		position: relative
+	}
+}
+
+@media only screen and (min-width:992px) {
+	.idt-chat.conference-mode {
+		max-width: calc(100% - 415px);
+		margin-right: auto
+	}
+}
+
+@media only screen and (max-width:639px) {
+	.idt-chat__room {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0
+	}
+}
+
+@media only screen and (min-width:640px) {
+	.idt-chat__room {
+		flex: 0 0 auto;
+		position: relative;
+		width: 360px;
+		margin-left: 1rem
+	}
+}
+
+.idt-chat__room .room {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	box-shadow: 0 1px 8px 0 var(--black-alpha10);
+	transition: all .3s ease;
+	-webkit-animation: .3s ease openChatRoom-data-v-ccae01d0;
+	animation: .3s ease openChatRoom-data-v-ccae01d0
+}
+
+@media only screen and (min-width:640px) {
+	.idt-chat__room .room {
+		height: 565px;
+		border-radius: 5px 5px 0 0
+	}
+}
+
+@media only screen and (max-width:639px) {
+	.idt-chat__room .room.reduce {
+		bottom: calc(44px - 100vh)
+	}
+}
+
+@media only screen and (min-width:640px) {
+	.idt-chat__room .room.reduce {
+		bottom: -521px
+	}
+}
+
+.idt-chat__room .room.reduce .idea-ht-chevron-bottom:before {
+	transform: rotate(180deg);
+	display: inline-block
+}
+
+.idt-chat__room .room.reduce .room__header:hover {
+	cursor: pointer
+}
+
+@-webkit-keyframes openChatRoom-data-v-ccae01d0 {
+	0% {
+		opacity: 0;
+		transform: translateY(100%)
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+@keyframes openChatRoom-data-v-ccae01d0 {
+	0% {
+		opacity: 0;
+		transform: translateY(100%)
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}

@@ -1,0 +1,21 @@
+/**
+ * Font size
+ */
+
+@mixin font-size($prefix: '') {
+
+	.#{$prefix}font-size-0 {
+		font-size: 0;
+	}
+
+	@each $label, $value in $fonts-size {
+		
+		.#{$prefix}font-size-#{$label} {
+			font-size: $value;
+		}
+
+	}
+
+}
+
+@include font-size();

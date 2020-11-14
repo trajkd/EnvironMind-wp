@@ -1,0 +1,278 @@
+.room__messages__container {
+    color: red
+}
+
+.room__messages__container:hover .room-message__actions {
+    display: inline-block
+}
+
+.room-message {
+    flex: 0 1 auto;
+    position: relative;
+    max-width: var(--chat-message-max-width);
+    background-color: var(--white);
+    border-radius: var(--chat-message-radius);
+    font-size: .825rem;
+    line-height: 1.4
+}
+
+.room-message__date {
+    margin-bottom: 1.1rem;
+    color: var(--grey-dark);
+    font-size: .75rem;
+    text-align: center
+}
+
+.room-message__container {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.1rem;
+    align-items: center
+}
+
+.room-message__container.ltr {
+    justify-content: flex-start
+}
+
+.room-message__container.rtl {
+    justify-content: flex-end
+}
+
+.room-message__container:not(.notice) {
+    padding: 0 1.75rem 0 .8125rem
+}
+
+.room-message__user {
+    flex: 0 0 auto;
+    padding: .5rem .8rem 0 0
+}
+
+.room-message__user__avatar {
+    flex: 0 1 auto;
+    cursor: pointer
+}
+
+.room-message__actions {
+    vertical-align: middle
+}
+
+.room-message__actions .menu.vertical li a {
+    display: flex;
+    align-items: center
+}
+
+.room-message__actions .glyphicons-more {
+    font-size: 1.5rem
+}
+
+.room-message__header {
+    position: relative
+}
+
+.room-message__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: .3125rem .625rem
+}
+
+.room-message__name {
+    margin-right: .5rem;
+    color: var(--grey-dark);
+    cursor: pointer
+}
+
+.room-message__time {
+    color: var(--main-color)
+}
+
+.room-message__content {
+    color: var(--grey-darkest);
+    padding: .3125rem .625rem .625rem;
+    white-space: pre-line;
+    word-break: break-word
+}
+
+.room-message__content a {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden
+}
+
+.room-message__delete {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    color: var(--grey-darker);
+    background-color: var(--white);
+    border: 1px solid var(--grey-darker);
+    border-radius: 100%;
+    font-size: .5rem;
+    text-align: center;
+    line-height: 16px;
+    transition: all .3s ease;
+    transform: translate(50%, -50%)
+}
+
+.room-message__delete:hover {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color)
+}
+
+.room-message__file {
+    display: block;
+    position: relative;
+    text-align: left;
+    overflow: hidden
+}
+
+.room-message__file:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0, transparent 50%, rgba(0, 0, 0, .5));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#80000000", GradientType=0)
+}
+
+.room-message.file-and-content .room-message__header,
+.room-message.file .room-message__header {
+    border-radius: 0;
+    overflow: hidden
+}
+
+.room-message.file-and-content .room-message__info,
+.room-message.file .room-message__info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 1
+}
+
+.room-message.file-and-content .room-message__name,
+.room-message.file-and-content .room-message__time,
+.room-message.file .room-message__name,
+.room-message.file .room-message__time {
+    color: var(--white)
+}
+
+.room-message.file-and-content .file-preview,
+.room-message.file .file-preview {
+    display: block;
+    min-width: 200px
+}
+
+.room-message.file-and-content .file-preview__file,
+.room-message.file .file-preview__file {
+    width: 100%;
+    height: 150px
+}
+
+.room-message.file-and-content .file-preview__figure,
+.room-message.file .file-preview__figure {
+    width: 100%;
+    height: 150px;
+    background-color: var(--white);
+    background-size: cover
+}
+
+.room-message.file .room-message__file {
+    border-radius: var(--chat-message-radius)
+}
+
+.room-message.file-and-content .room-message__file {
+    border-radius: var(--chat-message-radius) var(--chat-message-radius) 0 0
+}
+
+.room-message.personal {
+    flex: 0 0 auto;
+    color: var(--white);
+    background-color: var(--main-color);
+    max-width: calc(var(--chat-message-max-width) - 20px)
+}
+
+.room-message.personal .room-message__content {
+    color: var(--white)
+}
+
+.room-message.personal .room-message__content a {
+    color: var(--white);
+    text-decoration: underline
+}
+
+.room-message.personal .room-message__name,
+.room-message.personal .room-message__time {
+    color: var(--white)
+}
+
+.room-message.notice {
+    width: 100%;
+    max-width: 100%;
+    padding-top: .3125rem;
+    background-color: var(--grey-darker-alpha15);
+    border-radius: 0;
+    font-size: .75rem;
+    text-align: center
+}
+
+.room-message.notice .room-message__content {
+    color: var(--grey-darker)
+}
+
+.room-message.notice.danger {
+    background-color: var(--secondary-color-alpha15)
+}
+
+.room-message.notice.danger .room-message__content,
+.room-message.notice.danger .room-message__content a {
+    color: var(--secondary-color)
+}
+
+.room-message.notice.danger .room-message__content a {
+    text-decoration: none;
+    pointer-events: none
+}
+
+.room-message.notice.success {
+    background-color: var(--green-alpha15)
+}
+
+.room-message.notice.success .room-message__content,
+.room-message.notice.success .room-message__content a {
+    color: var(--green)
+}
+
+.room-message.notice.success .room-message__content a {
+    text-decoration: none;
+    pointer-events: none
+}
+
+.ie11 .room-message {
+    max-width: 270px
+}
+
+.ie11 .room-message__content {
+    word-break: break-all!important
+}
+
+.message-profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 1000
+}
