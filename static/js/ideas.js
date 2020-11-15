@@ -31,8 +31,12 @@ $("button.add-idea").click( function() {
 						dataType : "json",
 						url : "/wp-json/wp/v2/editidea",
 						data : {_wpnonce: nonce, title: uuid, status: "publish", content: projectIDemail, template: "editidea.php"},
+						beforeSend: function ( xhr ) {
+					        xhr.setRequestHeader( 'X-WP-Nonce', nonce );
+					    },
 						error: function(error) {
-							console.log("Error while creating idea: " + error);
+							console.log("Error while creating idea: ");
+							console.log(error);
 						},
 						success: function(response) {
 							console.log("Idea created.");
@@ -46,8 +50,12 @@ $("button.add-idea").click( function() {
 						dataType : "json",
 						url : "/wp-json/wp/v2/editidea",
 						data : {_wpnonce: nonce, title: uuid, status: "publish", content: projectIDemail, template: "editidea.php"},
+						beforeSend: function ( xhr ) {
+					        xhr.setRequestHeader( 'X-WP-Nonce', nonce );
+					    },
 						error: function(error) {
-							console.log("Error while creating idea: " + error);
+							console.log("Error while creating idea: ");
+							console.log(error);
 						},
 						success: function(response) {
 							console.log("Idea created.");
