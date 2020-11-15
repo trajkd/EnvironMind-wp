@@ -28,7 +28,7 @@
 <div class="container copyright">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <p class="text-muted">Copyright &copy; <span class="blair">EnvironMind</span> <?php echo currentYear(); ?></p>
+      <p class="text-muted">Copyright &copy; <span class="blair">Open Innovability</span> <?php echo currentYear(); ?></p>
     </div>
   </div>
 </div>

@@ -27716,7 +27716,7 @@ button.project-screenshot__add {
 }
 
 .projects-card__content__tag-list {
-	margin: 0;
+	margin: 30px 0;
 	overflow: hidden
 }
 
@@ -27837,7 +27837,7 @@ button.project-screenshot__add {
 
 .projects-card__hire {
 	position: relative;
-	width: 250px;
+	width: 260px;
 	-webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, .1));
 	filter: drop-shadow(0 0 2px rgba(0, 0, 0, .1))
 }

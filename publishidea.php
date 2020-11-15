@@ -242,6 +242,21 @@
 		<script src="https://sdk.amazonaws.com/js/aws-sdk-2.766.0.min.js"></script>
 		<script src="/wp-content/themes/EnvironMind-wp/static/js/clean-blog.js"></script>
 		<script src="/wp-content/themes/EnvironMind-wp/static/js/sidebar.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+		<script>
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyDI-WnW9vEi0dN8kuep2FKWEEIavl86LyI",
+		    authDomain: "environmind-sfh2020.firebaseapp.com",
+		    databaseURL: "https://environmind-sfh2020.firebaseio.com",
+		    projectId: "environmind-sfh2020",
+		    storageBucket: "environmind-sfh2020.appspot.com",
+		    messagingSenderId: "1090676361953",
+		    appId: "1:1090676361953:web:d5881ebcbd18cae846c5a0"
+		  };
+		  firebase.initializeApp(firebaseConfig);
+		  var db = firebase.database();
+		</script>
 		<script src="/wp-content/themes/EnvironMind-wp/static/js/viewideas.js"></script>
 	</body>
 </html>

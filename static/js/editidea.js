@@ -553,11 +553,10 @@ var s3 = new AWS.S3({apiVersion: "2006-03-01",params: { Bucket: "environmind" }}
 					`);
 				$(".project-banner").attr("style", "background-image: url('https://img.youtube.com/vi/"+(snapshot.val().YoutubeBG).split('v=')[1]+"/maxresdefault.jpg'); background-size: cover; background-position: center center; position: relative; overflow: hidden;");
 				$(".project-banner").append(`<div style="position: absolute; left: 0px; top: 0px;">
-											<iframe id="player0" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="`+$(".project-banner").width()+`" height="`+$(".project-banner").height()+`" style="pointer-events: none;"></iframe>
+											<iframe id="player0" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="`+$(".project-banner").width()+`" height="`+$(".project-banner").height()+`" style="pointer-events: none;" src="https://www.youtube.com/embed/`+$("#youtubeID").val().substring($("#youtubeID").val().lastIndexOf('=') + 1)+`?autoplay=1&mute=1&controls=0&iv_load_policy=3&cc_load_policy=0modestbranding=1playsinline=1&rel=0&showinfo=0&playlist=o&enablejsapi=1&widgetid=5"></iframe>
 										</div>`);
 				$("#youtubeID").val(snapshot.val().YoutubeBG);
-				$(".video-bg").parent().parent().parent().parent().children().first().html(`<iframe id="player0" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="`+$(".project-banner").width()+`" height="`+$(".project-banner").height()+`" style="pointer-events: none;"></iframe>`);
-				$("#player0").attr("src", "https://www.youtube.com/embed/"+$("#youtubeID").val().substring($("#youtubeID").val().lastIndexOf('=') + 1)+"?autoplay=1&mute=1&controls=0&iv_load_policy=3&cc_load_policy=0modestbranding=1playsinline=1&rel=0&showinfo=0&playlist=o&enablejsapi=1&widgetid=5");
+				//$(".video-bg").parent().parent().parent().parent().children().first().html(`<iframe id="player0" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="`+$(".project-banner").width()+`" height="`+$(".project-banner").height()+`" style="pointer-events: none;"></iframe>`);
 				$("#youtubeID").on("keyup change", function() {
 					$(".video-bg").parent().parent().parent().parent().children().first().html(`<iframe id="player0" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="`+$(".project-banner").width()+`" height="`+$(".project-banner").height()+`" style="pointer-events: none;"></iframe>`);
 					$("#player0").attr("src", "https://www.youtube.com/embed/"+$("#youtubeID").val().substring($("#youtubeID").val().lastIndexOf('=') + 1)+"?autoplay=1&mute=1&controls=0&iv_load_policy=3&cc_load_policy=0modestbranding=1playsinline=1&rel=0&showinfo=0&playlist=o&enablejsapi=1&widgetid=5");
@@ -568,10 +567,12 @@ var s3 = new AWS.S3({apiVersion: "2006-03-01",params: { Bucket: "environmind" }}
 				$(".project-banner").attr("style", "background-image: url('/wp-content/themes/MindEmpathy-wp/static/img/ikea-man.svg');");
 			}
 			$(".app-url").val(snapshot.val().Website);
-			var tracks = (snapshot.val().Tracks).split(',');
-			for (var i = 0; i < tracks.length; i++) {
-				$("#"+tracks[i]).attr("checked", "checked");
-				$("#"+tracks[i]).addClass("checked");
+			if (snapshot.val().Tracks !== "") {
+				var tracks = (snapshot.val().Tracks).split(',');
+				for (var i = 0; i < tracks.length; i++) {
+					$("#"+tracks[i]).attr("checked", "checked");
+					$("#"+tracks[i]).addClass("checked");
+				}
 			}
 			if (snapshot.val().Logo === "") {
 				$(".project-intro__logo img").attr("src", "/wp-content/themes/MindEmpathy-wp/static/img/idealogo.svg");
@@ -1212,10 +1213,12 @@ var s3 = new AWS.S3({apiVersion: "2006-03-01",params: { Bucket: "environmind" }}
 				});
 			}
 
-			var hiring = (snapshot.val().Hiring).split(',');
-			for (var j = 0; j < hiring.length; j++) {
-				$("."+hiring[j].toLowerCase().replace(" ", "-").replace("/", "")).addClass("enabled");
-				$("."+hiring[j].toLowerCase().replace(" ", "-").replace("/", "")).find(".project-hires__item__check").addClass("checked");
+			if(snapshot.val().Hiring !== "") {
+				var hiring = (snapshot.val().Hiring).split(',');
+				for (var j = 0; j < hiring.length; j++) {
+					$("."+hiring[j].toLowerCase().replace(" ", "-").replace("/", "")).addClass("enabled");
+					$("."+hiring[j].toLowerCase().replace(" ", "-").replace("/", "")).find(".project-hires__item__check").addClass("checked");
+				}
 			}
 
 			$(".personal-notes__textarea").val(snapshot.val().PersonalNotes);

@@ -120,23 +120,59 @@
                                                                     <div class="dropdown-pane__header"> Tracks </div>
                                                                     <ul class="dropdown menu vertical multiple" role="menu">
                                                                         <!---->
-                                                                        <li role="menuitem"> <input type="checkbox" id="Biology"> <label class="dropdown-pane__checkbox" for="Biology"> Biology </label> </li>
+                                                                        <li role="menuitem"> <input type="checkbox" id="Agriculture"> <label class="dropdown-pane__checkbox" for="Agriculture"> Agriculture </label> </li>
                                                                         <!---->
-                                                                        <li role="menuitem"> <input type="checkbox" id="Chemistry"> <label class="dropdown-pane__checkbox" for="Chemistry"> Chemistry </label> </li>
+                                                                        <li role="menuitem"> <input type="checkbox" id="Architecture"> <label class="dropdown-pane__checkbox" for="Architecture"> Architecture </label> </li>
                                                                         <!---->
-                                                                        <li role="menuitem"> <input type="checkbox" id="Drawing"> <label class="dropdown-pane__checkbox" for="Drawing"> Drawing </label> </li>
+                                                                        <li role="menuitem"> <input type="checkbox" id="Blockchain"> <label class="dropdown-pane__checkbox" for="Blockchain"> Blockchain </label> </li>
                                                                         <!---->
-                                                                        <li role="menuitem"> <input type="checkbox" id="English"> <label class="dropdown-pane__checkbox" for="English"> English </label> </li>
+                                                                        <li role="menuitem"> <input type="checkbox" id="Brand"> <label class="dropdown-pane__checkbox" for="Brand"> Brand </label> </li>
                                                                         <!---->
-                                                                        <li role="menuitem"> <input type="checkbox" id="History"> <label class="dropdown-pane__checkbox" for="History"> History </label> </li>
+                                                                        <li role="menuitem"> <input type="checkbox" id="Children"> <label class="dropdown-pane__checkbox" for="Children"> Children </label> </li>
                                                                         <!---->
-                                                                        <li role="menuitem"> <input type="checkbox" id="Latin"> <label class="dropdown-pane__checkbox" for="Latin"> Latin </label> </li>
+                                                                        <li role="menuitem"> <input type="checkbox" id="Culture"> <label class="dropdown-pane__checkbox" for="Culture"> Culture </label> </li>
                                                                         <!---->
-                                                                        <li role="menuitem"> <input type="checkbox" id="Mathematics"> <label class="dropdown-pane__checkbox" for="Mathematics"> Mathematics </label> </li>
+                                                                        <li role="menuitem"> <input type="checkbox" id="Digital"> <label class="dropdown-pane__checkbox" for="Digital"> Digital </label> </li>
                                                                         <!---->
-                                                                        <li role="menuitem"> <input type="checkbox" id="Physics"> <label class="dropdown-pane__checkbox" for="Physics"> Physics </label> </li>
+                                                                        <li role="menuitem"> <input type="checkbox" id="Education"> <label class="dropdown-pane__checkbox" for="Education"> Education </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Energy"> <label class="dropdown-pane__checkbox" for="Energy"> Energy </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Entertainment"> <label class="dropdown-pane__checkbox" for="Entertainment"> Entertainment </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Ethics"> <label class="dropdown-pane__checkbox" for="Ethics"> Ethics </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Fashion"> <label class="dropdown-pane__checkbox" for="Fashion"> Fashion </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Film"> <label class="dropdown-pane__checkbox" for="Film"> Film </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Finance"> <label class="dropdown-pane__checkbox" for="Finance"> Finance </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Food&Beverage"> <label class="dropdown-pane__checkbox" for="Food&Beverage"> Food&Beverage </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Government"> <label class="dropdown-pane__checkbox" for="Government"> Government </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Health"> <label class="dropdown-pane__checkbox" for="Health"> Health </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Home"> <label class="dropdown-pane__checkbox" for="Home"> Home </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Manufacturing"> <label class="dropdown-pane__checkbox" for="Manufacturing"> Manufacturing </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Miscellaneous"> <label class="dropdown-pane__checkbox" for="Miscellaneous"> Miscellaneous </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Mobility"> <label class="dropdown-pane__checkbox" for="Mobility"> Mobility </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Music"> <label class="dropdown-pane__checkbox" for="Music"> Music </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Retail"> <label class="dropdown-pane__checkbox" for="Retail"> Retail </label> </li>
                                                                         <!---->
                                                                         <li role="menuitem"> <input type="checkbox" id="Science"> <label class="dropdown-pane__checkbox" for="Science"> Science </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Services"> <label class="dropdown-pane__checkbox" for="Services"> Services </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Sport"> <label class="dropdown-pane__checkbox" for="Sport"> Sport </label> </li>
+                                                                        <!---->
+                                                                        <li role="menuitem"> <input type="checkbox" id="Technology"> <label class="dropdown-pane__checkbox" for="Technology"> Technology </label> </li>
                                                                         <!---->
                                                                     </ul>
                                                                 </div>
@@ -167,6 +203,21 @@
         <script src="https://sdk.amazonaws.com/js/aws-sdk-2.766.0.min.js"></script>
         <script src="/wp-content/themes/EnvironMind-wp/static/js/clean-blog.js"></script>
         <script src="/wp-content/themes/EnvironMind-wp/static/js/sidebar.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+        <script>
+          var firebaseConfig = {
+            apiKey: "AIzaSyDI-WnW9vEi0dN8kuep2FKWEEIavl86LyI",
+            authDomain: "environmind-sfh2020.firebaseapp.com",
+            databaseURL: "https://environmind-sfh2020.firebaseio.com",
+            projectId: "environmind-sfh2020",
+            storageBucket: "environmind-sfh2020.appspot.com",
+            messagingSenderId: "1090676361953",
+            appId: "1:1090676361953:web:d5881ebcbd18cae846c5a0"
+          };
+          firebase.initializeApp(firebaseConfig);
+          var db = firebase.database();
+        </script>
         <script src="/wp-content/themes/EnvironMind-wp/static/js/ideas.js"></script>
     </body>
 </html>

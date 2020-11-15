@@ -487,8 +487,8 @@ if ( !is_user_logged_in() ){ header( "Location: /member/login" ); die; } ?>
 	                                            <!----> <!---->
 	                                            <ul class="project-hires">
 	                                                <!---->
-	                                                <li class="project-hires__item creative-mind">
-	                                                    <!----> <span class="project-hires__item__tag">Creative mind</span> 
+	                                                <li class="project-hires__item developer">
+	                                                    <!----> <span class="project-hires__item__tag">Developer</span> 
 	                                                    <div class="project-hires__item__check">
 	                                                    	<!---->
 													        <div class="idt-icon">
@@ -499,8 +499,8 @@ if ( !is_user_logged_in() ){ header( "Location: /member/login" ); die; } ?>
 	                                                    <div class="project-hires__item__info">We need you!</div>
 	                                                </li>
 	                                                <!---->
-	                                                <li class="project-hires__item analytical-mind"style="">
-													    <span class="project-hires__item__tag">Analytical mind</span> 
+	                                                <li class="project-hires__item blockchain-expert"style="">
+													    <span class="project-hires__item__tag">Blockchain expert</span> 
 													    <div class="project-hires__item__check" style="">
 													        <!---->
 													        <div class="idt-icon">
@@ -511,8 +511,8 @@ if ( !is_user_logged_in() ){ header( "Location: /member/login" ); die; } ?>
 													    <div class="project-hires__item__info">We need you!</div>
 													</li>
 	                                                <!---->
-	                                                <li class="project-hires__item writing-mind">
-	                                                    <!----> <span class="project-hires__item__tag">Writing mind</span> 
+	                                                <li class="project-hires__item data-analyst">
+	                                                    <!----> <span class="project-hires__item__tag">Data analyst</span> 
 	                                                    <div class="project-hires__item__check">
 	                                                    	<!---->
 													        <div class="idt-icon">
@@ -523,8 +523,8 @@ if ( !is_user_logged_in() ){ header( "Location: /member/login" ); die; } ?>
 	                                                    <div class="project-hires__item__info">We need you!</div>
 	                                                </li>
 	                                                <!---->
-	                                                <li class="project-hires__item designer-mind">
-	                                                    <!----> <span class="project-hires__item__tag">Designer mind</span> 
+	                                                <li class="project-hires__item uxui-designer">
+	                                                    <!----> <span class="project-hires__item__tag">UX/UI Designer</span> 
 	                                                    <div class="project-hires__item__check">
 	                                                    	<!---->
 													        <div class="idt-icon">
@@ -535,8 +535,8 @@ if ( !is_user_logged_in() ){ header( "Location: /member/login" ); die; } ?>
 	                                                    <div class="project-hires__item__info">We need you!</div>
 	                                                </li>
 	                                                <!---->
-	                                                <li class="project-hires__item researcher-mind">
-	                                                    <!----> <span class="project-hires__item__tag">Researcher mind</span> 
+	                                                <li class="project-hires__item project-manager">
+	                                                    <!----> <span class="project-hires__item__tag">Project manager</span> 
 	                                                    <div class="project-hires__item__check">
 	                                                    	<!---->
 													        <div class="idt-icon">
@@ -547,8 +547,8 @@ if ( !is_user_logged_in() ){ header( "Location: /member/login" ); die; } ?>
 	                                                    <div class="project-hires__item__info">We need you!</div>
 	                                                </li>
 	                                                <!---->
-	                                                <li class="project-hires__item engineer-mind">
-	                                                    <!----> <span class="project-hires__item__tag">Engineer mind</span> 
+	                                                <li class="project-hires__item engineer">
+	                                                    <!----> <span class="project-hires__item__tag">Engineer</span> 
 	                                                    <div class="project-hires__item__check">
 	                                                    	<!---->
 													        <div class="idt-icon">
