@@ -463,7 +463,7 @@
 			if ((this.label+this.copy === hoveringCopy)) {
 				this.ctx.font = 35+(this.radius-4)*5+10+"px BlairMdITC TT";
 				linkWidths[this.label] = this.ctx.measureText(this.label).width;
-				this.ctx.fillStyle = '#77bb40';
+				this.ctx.fillStyle = '#ff0f63';
 		    }
 	    }
 	    this.ctx.fillText(this.label, this.x+5, this.y-5);
@@ -523,7 +523,7 @@
 			density: 15000, // the lower the denser
 			netLineDistance: 200,
 			netLineColor: '#868e96',
-			particleColors: ['#77bb40'] // ['#6D4E5C', '#aaa', '#FFC458' ]
+			particleColors: ['#ff0f63'] // ['#6D4E5C', '#aaa', '#FFC458' ]
 		};
 		this.canvas = parent.canvas;
 		this.ctx = parent.ctx;

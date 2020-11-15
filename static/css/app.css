@@ -26021,11 +26021,11 @@ idt-menu-interview .idt-menu-conference__footer a {
 }
 
 .project-tools__actions .button.save {
-	background-color: var(--red)
+	background-color: var(--green)
 }
 
 .project-tools__actions .button.save:hover {
-	background-color: var(--red-dark)
+	background-color: var(--green-dark)
 }
 
 .project-tools .idt-switch,

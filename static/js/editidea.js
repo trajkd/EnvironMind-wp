@@ -1413,225 +1413,278 @@ function insertData() {
 	// 	} else {
 
 	db.ref('/projects/' + projectID).once('value').then(function(snapshot) {
-  		if (snapshot.val()) {
 
-			var currentDate = new Date();
+		// var currentDate = new Date();
 
-			var checkedTracks = $(".checked");
-			var checkedCSV = "";
-			for (var i = 0; i < checkedTracks.length; i++) {
-				if (checkedTracks[i].getAttribute("id")) {
-					checkedCSV += checkedTracks[i].getAttribute("id") + ",";
-				}
-				checkedCSV.replace(",null", "");
+		var checkedTracks = $(".checked");
+		var checkedCSV = "";
+		for (var i = 0; i < checkedTracks.length; i++) {
+			if (checkedTracks[i].getAttribute("id")) {
+				checkedCSV += checkedTracks[i].getAttribute("id") + ",";
 			}
-			checkedCSV = checkedCSV.slice(0, -1);
+			checkedCSV.replace(",null", "");
+		}
+		checkedCSV = checkedCSV.slice(0, -1);
 
-			var hiringCSV = "";
-			var hiringList = $(".project-hires__item.enabled");
-			for (var i = 0; i < hiringList.length; i++) {
-				hiringCSV += $(hiringList[i]).children().first().html() + ",";
-			}
-			hiringCSV = hiringCSV.slice(0, -1);
+		var hiringCSV = "";
+		var hiringList = $(".project-hires__item.enabled");
+		for (var i = 0; i < hiringList.length; i++) {
+			hiringCSV += $(hiringList[i]).children().first().html() + ",";
+		}
+		hiringCSV = hiringCSV.slice(0, -1);
 
-			var teammatesCSV = "";
-			var teammatesList = $(".idt-user-information__id");
-			for (var i = 0; i < teammatesList.length; i++) {
-				teammatesCSV += $(teammatesList[i]).attr("id") + ",";
-			}
-			teammatesCSV = teammatesCSV.slice(0, -1);
-			if ($(".project-step-title4").length === 0) {
-				var projectsteptitle4 = "";
+		var teammatesCSV = "";
+		var teammatesList = $(".idt-user-information__id");
+		for (var i = 0; i < teammatesList.length; i++) {
+			teammatesCSV += $(teammatesList[i]).attr("id") + ",";
+		}
+		teammatesCSV = teammatesCSV.slice(0, -1);
+		if ($(".project-step-title4").length === 0) {
+			var projectsteptitle4 = "";
+		} else {
+			var projectsteptitle4 = $(".project-step-title4").val();
+		}
+		if ($(".project-step-title5").length === 0) {
+			var projectsteptitle5 = "";
+		} else {
+			var projectsteptitle5 = $(".project-step-title5").val();
+		}
+		if ($(".project-step-title6").length === 0) {
+			var projectsteptitle6 = "";
+		} else {
+			var projectsteptitle6 = $(".project-step-title6").val();
+		}
+		if ($(".project-step-title7").length === 0) {
+			var projectsteptitle7 = "";
+		} else {
+			var projectsteptitle7 = $(".project-step-title7").val();
+		}
+		if ($(".project-step-title8").length === 0) {
+			var projectsteptitle8 = "";
+		} else {
+			var projectsteptitle8 = $(".project-step-title8").val();
+		}
+		if ($(".project-step-title9").length === 0) {
+			var projectsteptitle9 = "";
+		} else {
+			var projectsteptitle9 = $(".project-step-title9").val();
+		}
+		if ($(".project-step-description4").length === 0) {
+			var projectstepdescription4 = "";
+		} else {
+			var projectstepdescription4 = $(".project-step-description4").val();
+		}
+		if ($(".project-step-description5").length === 0) {
+			var projectstepdescription5 = "";
+		} else {
+			var projectstepdescription5 = $(".project-step-description5").val();
+		}
+		if ($(".project-step-description6").length === 0) {
+			var projectstepdescription6 = "";
+		} else {
+			var projectstepdescription6 = $(".project-step-description6").val();
+		}
+		if ($(".project-step-description7").length === 0) {
+			var projectstepdescription7 = "";
+		} else {
+			var projectstepdescription7 = $(".project-step-description7").val();
+		}
+		if ($(".project-step-description8").length === 0) {
+			var projectstepdescription8 = "";
+		} else {
+			var projectstepdescription8 = $(".project-step-description8").val();
+		}
+		if ($(".project-step-description9").length === 0) {
+			var projectstepdescription9 = "";
+		} else {
+			var projectstepdescription9 = $(".project-step-description9").val();
+		}
+		if (typeof imageBGfiles !== 'undefined' && imageBGfiles.length) {
+			var imageBGfile = imageBGfiles[0];
+			var imageBGfileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(imageBGfile.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+			var youtubeBGURL = "";
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().ImageBG !== 'undefined' && snapshot.val().ImageBG !== "") {
+				var imageBGfileNameURL = snapshot.val().ImageBG.S;
 			} else {
-				var projectsteptitle4 = $(".project-step-title4").val();
-			}
-			if ($(".project-step-title5").length === 0) {
-				var projectsteptitle5 = "";
-			} else {
-				var projectsteptitle5 = $(".project-step-title5").val();
-			}
-			if ($(".project-step-title6").length === 0) {
-				var projectsteptitle6 = "";
-			} else {
-				var projectsteptitle6 = $(".project-step-title6").val();
-			}
-			if ($(".project-step-title7").length === 0) {
-				var projectsteptitle7 = "";
-			} else {
-				var projectsteptitle7 = $(".project-step-title7").val();
-			}
-			if ($(".project-step-title8").length === 0) {
-				var projectsteptitle8 = "";
-			} else {
-				var projectsteptitle8 = $(".project-step-title8").val();
-			}
-			if ($(".project-step-title9").length === 0) {
-				var projectsteptitle9 = "";
-			} else {
-				var projectsteptitle9 = $(".project-step-title9").val();
-			}
-			if ($(".project-step-description4").length === 0) {
-				var projectstepdescription4 = "";
-			} else {
-				var projectstepdescription4 = $(".project-step-description4").val();
-			}
-			if ($(".project-step-description5").length === 0) {
-				var projectstepdescription5 = "";
-			} else {
-				var projectstepdescription5 = $(".project-step-description5").val();
-			}
-			if ($(".project-step-description6").length === 0) {
-				var projectstepdescription6 = "";
-			} else {
-				var projectstepdescription6 = $(".project-step-description6").val();
-			}
-			if ($(".project-step-description7").length === 0) {
-				var projectstepdescription7 = "";
-			} else {
-				var projectstepdescription7 = $(".project-step-description7").val();
-			}
-			if ($(".project-step-description8").length === 0) {
-				var projectstepdescription8 = "";
-			} else {
-				var projectstepdescription8 = $(".project-step-description8").val();
-			}
-			if ($(".project-step-description9").length === 0) {
-				var projectstepdescription9 = "";
-			} else {
-				var projectstepdescription9 = $(".project-step-description9").val();
-			}
-			if (typeof imageBGfiles !== 'undefined' && imageBGfiles.length) {
-				var imageBGfile = imageBGfiles[0];
-				var imageBGfileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(imageBGfile.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-				var youtubeBGURL = "";
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().ImageBG !== 'undefined' && snapshot.val().ImageBG !== "") {
-					var imageBGfileNameURL = snapshot.val().ImageBG.S;
-				} else {
-					var imageBGfileNameURL = "";
-				}
-			}
-			if ($("#youtubeID").length) {
-				var youtubeBGURL = $("#youtubeID").val();
 				var imageBGfileNameURL = "";
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().YoutubeBG !== 'undefined' && snapshot.val().YoutubeBG !== "") {
-					var youtubeBGURL = snapshot.val().YoutubeBG.S;
-				} else {
-					var youtubeBGURL = "";
-				}
-			}
-			if (typeof logofiles !== 'undefined' && logofiles.length) {
-				var logofile = logofiles[0];
-				var logofileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(logofile.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().Logo !== 'undefined' && snapshot.val().Logo !== "") {
-					var logofileNameURL = snapshot.val().Logo;
-				} else {
-					var logofileNameURL = "";
-				}
-			}
-			if (typeof pdffiles !== 'undefined' && pdffiles.length) {
-				var pdffile = pdffiles[0];
-				var pdffileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(pdffile.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().PDF !== 'undefined' && snapshot.val().PDF !== "") {
-					var pdffileNameURL = snapshot.val().PDF;
-				} else {
-					var pdffileNameURL = "";
-				}
-			}
-			if (stepfilesDict["step1"] !== "") {
-				var step1file = stepfilesDict["step1"][0];
-				var step1fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step1file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().ProjectStepImage1 !== 'undefined' && snapshot.val().ProjectStepImage1 !== "") {
-					var step1fileNameURL = snapshot.val().ProjectStepImage1;
-				} else {
-					var step1fileNameURL = "";
-				}
-			}
-			if (stepfilesDict["step2"] !== "") {
-				var step2file = stepfilesDict["step2"][0];
-				var step2fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step2file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().ProjectStepImage2 !== 'undefined' && snapshot.val().ProjectStepImage2 !== "") {
-					var step2fileNameURL = snapshot.val().ProjectStepImage2;
-				} else {
-					var step2fileNameURL = "";
-				}
-			}
-			if (stepfilesDict["step3"] !== "") {
-				var step3file = stepfilesDict["step3"][0];
-				var step3fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step3file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().ProjectStepImage3 !== 'undefined' && snapshot.val().ProjectStepImage3 !== "") {
-					var step3fileNameURL = snapshot.val().ProjectStepImage3;
-				} else {
-					var step3fileNameURL = "";
-				}
-			}
-			if (stepfilesDict["step4"] !== "") {
-				var step4file = stepfilesDict["step4"][0];
-				var step4fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step4file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().ProjectStepImage4 !== 'undefined' && snapshot.val().ProjectStepImage4 !== "") {
-					var step4fileNameURL = snapshot.val().ProjectStepImage4;
-				} else {
-					var step4fileNameURL = "";
-				}
-			}
-			if (stepfilesDict["step5"] !== "") {
-				var step5file = stepfilesDict["step5"][0];
-				var step5fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step5file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().ProjectStepImage5 !== 'undefined' && snapshot.val().ProjectStepImage5 !== "") {
-					var step5fileNameURL = snapshot.val().ProjectStepImage5;
-				} else {
-					var step5fileNameURL = "";
-				}
-			}
-			if (stepfilesDict["step6"] !== "") {
-				var step6file = stepfilesDict["step6"][0];
-				var step6fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step6file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().ProjectStepImage6 !== 'undefined' && snapshot.val().ProjectStepImage6 !== "") {
-					var step6fileNameURL = snapshot.val().ProjectStepImage6;
-				} else {
-					var step6fileNameURL = "";
-				}
-			}
-			if (stepfilesDict["step7"] !== "") {
-				var step7file = stepfilesDict["step7"][0];
-				var step7fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step7file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().ProjectStepImage7 !== 'undefined' && snapshot.val().ProjectStepImage7 !== "") {
-					var step7fileNameURL = snapshot.val().ProjectStepImage7;
-				} else {
-					var step7fileNameURL = "";
-				}
-			}
-			if (stepfilesDict["step8"] !== "") {
-				var step8file = stepfilesDict["step8"][0];
-				var step8fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step8file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().ProjectStepImage8 !== 'undefined' && snapshot.val().ProjectStepImage8 !== "") {
-					var step8fileNameURL = snapshot.val().ProjectStepImage8;
-				} else {
-					var step8fileNameURL = "";
-				}
-			}
-			if (stepfilesDict["step9"] !== "") {
-				var step9file = stepfilesDict["step9"][0];
-				var step9fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step9file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
-			} else {
-				if (typeof snapshot.val() !== 'undefined' && typeof snapshot.val().ProjectStepImage9 !== 'undefined' && snapshot.val().ProjectStepImage9 !== "") {
-					var step9fileNameURL = snapshot.val().ProjectStepImage9;
-				} else {
-					var step9fileNameURL = "";
-				}
 			}
 		}
+		if ($("#youtubeID").length) {
+			var youtubeBGURL = $("#youtubeID").val();
+			var imageBGfileNameURL = "";
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().YoutubeBG !== 'undefined' && snapshot.val().YoutubeBG !== "") {
+				var youtubeBGURL = snapshot.val().YoutubeBG.S;
+			} else {
+				var youtubeBGURL = "";
+			}
+		}
+		if (typeof logofiles !== 'undefined' && logofiles.length) {
+			var logofile = logofiles[0];
+			var logofileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(logofile.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().Logo !== 'undefined' && snapshot.val().Logo !== "") {
+				var logofileNameURL = snapshot.val().Logo;
+			} else {
+				var logofileNameURL = "";
+			}
+		}
+		if (typeof pdffiles !== 'undefined' && pdffiles.length) {
+			var pdffile = pdffiles[0];
+			var pdffileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(pdffile.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().PDF !== 'undefined' && snapshot.val().PDF !== "") {
+				var pdffileNameURL = snapshot.val().PDF;
+			} else {
+				var pdffileNameURL = "";
+			}
+		}
+		if (stepfilesDict["step1"] !== "") {
+			var step1file = stepfilesDict["step1"][0];
+			var step1fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step1file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().ProjectStepImage1 !== 'undefined' && snapshot.val().ProjectStepImage1 !== "") {
+				var step1fileNameURL = snapshot.val().ProjectStepImage1;
+			} else {
+				var step1fileNameURL = "";
+			}
+		}
+		if (stepfilesDict["step2"] !== "") {
+			var step2file = stepfilesDict["step2"][0];
+			var step2fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step2file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().ProjectStepImage2 !== 'undefined' && snapshot.val().ProjectStepImage2 !== "") {
+				var step2fileNameURL = snapshot.val().ProjectStepImage2;
+			} else {
+				var step2fileNameURL = "";
+			}
+		}
+		if (stepfilesDict["step3"] !== "") {
+			var step3file = stepfilesDict["step3"][0];
+			var step3fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step3file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().ProjectStepImage3 !== 'undefined' && snapshot.val().ProjectStepImage3 !== "") {
+				var step3fileNameURL = snapshot.val().ProjectStepImage3;
+			} else {
+				var step3fileNameURL = "";
+			}
+		}
+		if (stepfilesDict["step4"] !== "") {
+			var step4file = stepfilesDict["step4"][0];
+			var step4fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step4file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().ProjectStepImage4 !== 'undefined' && snapshot.val().ProjectStepImage4 !== "") {
+				var step4fileNameURL = snapshot.val().ProjectStepImage4;
+			} else {
+				var step4fileNameURL = "";
+			}
+		}
+		if (stepfilesDict["step5"] !== "") {
+			var step5file = stepfilesDict["step5"][0];
+			var step5fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step5file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().ProjectStepImage5 !== 'undefined' && snapshot.val().ProjectStepImage5 !== "") {
+				var step5fileNameURL = snapshot.val().ProjectStepImage5;
+			} else {
+				var step5fileNameURL = "";
+			}
+		}
+		if (stepfilesDict["step6"] !== "") {
+			var step6file = stepfilesDict["step6"][0];
+			var step6fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step6file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().ProjectStepImage6 !== 'undefined' && snapshot.val().ProjectStepImage6 !== "") {
+				var step6fileNameURL = snapshot.val().ProjectStepImage6;
+			} else {
+				var step6fileNameURL = "";
+			}
+		}
+		if (stepfilesDict["step7"] !== "") {
+			var step7file = stepfilesDict["step7"][0];
+			var step7fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step7file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().ProjectStepImage7 !== 'undefined' && snapshot.val().ProjectStepImage7 !== "") {
+				var step7fileNameURL = snapshot.val().ProjectStepImage7;
+			} else {
+				var step7fileNameURL = "";
+			}
+		}
+		if (stepfilesDict["step8"] !== "") {
+			var step8file = stepfilesDict["step8"][0];
+			var step8fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step8file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().ProjectStepImage8 !== 'undefined' && snapshot.val().ProjectStepImage8 !== "") {
+				var step8fileNameURL = snapshot.val().ProjectStepImage8;
+			} else {
+				var step8fileNameURL = "";
+			}
+		}
+		if (stepfilesDict["step9"] !== "") {
+			var step9file = stepfilesDict["step9"][0];
+			var step9fileNameURL = "https://environmind.s3.eu-central-1.amazonaws.com/" + encodeURIComponent(step9file.name + "-from-" + projectIDemail).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\*/g, '%2A');
+		} else {
+			if (snapshot.val() !== null && typeof snapshot.val().ProjectStepImage9 !== 'undefined' && snapshot.val().ProjectStepImage9 !== "") {
+				var step9fileNameURL = snapshot.val().ProjectStepImage9;
+			} else {
+				var step9fileNameURL = "";
+			}
+		}
+
+		db.ref('projects/' + projectID).update({
+		    'ProjectID': projectID,
+			'Author': projectIDemail,
+			'Title': $(".project-title").val() || "",
+			'CreatedAt': firebase.database.ServerValue.TIMESTAMP,
+			'Website': $(".app-url").val() || "",
+			'Description': $(".project-tweet").val() || "",
+			'ImageBG': imageBGfileNameURL,
+			'YoutubeBG': youtubeBGURL,
+			'Logo': logofileNameURL,
+			'Tracks': checkedCSV,
+			'Issue': $(".the-issue").val() || "",
+			'Solution': $(".the-solution").val() || "",
+			'ProjectStepImage1': step1fileNameURL,
+			'ProjectStepImage2': step2fileNameURL,
+			'ProjectStepImage3': step3fileNameURL,
+			'ProjectStepImage4': step4fileNameURL,
+			'ProjectStepImage5': step5fileNameURL,
+			'ProjectStepImage6': step6fileNameURL,
+			'ProjectStepImage7': step7fileNameURL,
+			'ProjectStepImage8': step8fileNameURL,
+			'ProjectStepImage9': step9fileNameURL,
+			'ProjectStepTitle1': $(".project-step-title1").val() || "",
+			'ProjectStepTitle2': $(".project-step-title2").val() || "",
+			'ProjectStepTitle3': $(".project-step-title3").val() || "",
+			'ProjectStepTitle4': projectsteptitle4,
+			'ProjectStepTitle5': projectsteptitle5,
+			'ProjectStepTitle6': projectsteptitle6,
+			'ProjectStepTitle7': projectsteptitle7,
+			'ProjectStepTitle8': projectsteptitle8,
+			'ProjectStepTitle9': projectsteptitle9,
+			'ProjectStepDescription1': $(".project-step-description1").val() || "",
+			'ProjectStepDescription2': $(".project-step-description2").val() || "",
+			'ProjectStepDescription3': $(".project-step-description3").val() || "",
+			'ProjectStepDescription4': projectstepdescription4,
+			'ProjectStepDescription5': projectstepdescription5,
+			'ProjectStepDescription6': projectstepdescription6,
+			'ProjectStepDescription7': projectstepdescription7,
+			'ProjectStepDescription8': projectstepdescription8,
+			'ProjectStepDescription9': projectstepdescription9,
+			'PDF': pdffileNameURL,
+			'Slides': $(".upload-slides").val() || "",
+			'Teammates': teammatesCSV,
+			'Hiring': hiringCSV,
+			'PersonalNotes': $(".personal-notes__textarea").val() || ""
+		})
+		.then(function() {
+		    console.log("Document successfully written!");
+		    $("button.save").html("Save");
+		})
+		.catch(function(error) {
+		    console.error("Error writing document: ", error);
+		});
+
 	});
 		    // if (data.Items.length === 0) {
 				// var itemParams = {
@@ -1685,59 +1738,7 @@ function insertData() {
 				// 	}
 				// };
 
-				db.ref('projects/' + projectID).set({
-				    'ProjectID': projectID,
-					'Author': projectIDemail,
-					'Title': $(".project-title").val(),
-					'CreatedAt': "" + currentDate.getUTCFullYear() + (currentDate.getUTCMonth()+1) + currentDate.getUTCDate() + currentDate.getUTCHours() + currentDate.getUTCMinutes() + currentDate.getUTCSeconds(),
-					'Website': $(".app-url").val(),
-					'Description': $(".project-tweet").val(),
-					'ImageBG': imageBGfileNameURL,
-					'YoutubeBG': youtubeBGURL,
-					'Logo': logofileNameURL,
-					'Tracks': checkedCSV,
-					'Issue': $(".the-issue").val(),
-					'Solution': $(".the-solution").val(),
-					'ProjectStepImage1': step1fileNameURL,
-					'ProjectStepImage2': step2fileNameURL,
-					'ProjectStepImage3': step3fileNameURL,
-					'ProjectStepImage4': step4fileNameURL,
-					'ProjectStepImage5': step5fileNameURL,
-					'ProjectStepImage6': step6fileNameURL,
-					'ProjectStepImage7': step7fileNameURL,
-					'ProjectStepImage8': step8fileNameURL,
-					'ProjectStepImage9': step9fileNameURL,
-					'ProjectStepTitle1': $(".project-step-title1").val(),
-					'ProjectStepTitle2': $(".project-step-title2").val(),
-					'ProjectStepTitle3': $(".project-step-title3").val(),
-					'ProjectStepTitle4': projectsteptitle4,
-					'ProjectStepTitle5': projectsteptitle5,
-					'ProjectStepTitle6': projectsteptitle6,
-					'ProjectStepTitle7': projectsteptitle7,
-					'ProjectStepTitle8': projectsteptitle8,
-					'ProjectStepTitle9': projectsteptitle9,
-					'ProjectStepDescription1': $(".project-step-description1").val(),
-					'ProjectStepDescription2': $(".project-step-description2").val(),
-					'ProjectStepDescription3': $(".project-step-description3").val(),
-					'ProjectStepDescription4': projectstepdescription4,
-					'ProjectStepDescription5': projectstepdescription5,
-					'ProjectStepDescription6': projectstepdescription6,
-					'ProjectStepDescription7': projectstepdescription7,
-					'ProjectStepDescription8': projectstepdescription8,
-					'ProjectStepDescription9': projectstepdescription9,
-					'PDF': pdffileNameURL,
-					'Slides': $(".upload-slides").val(),
-					'Teammates': teammatesCSV,
-					'Hiring': hiringCSV,
-					'PersonalNotes': $(".personal-notes__textarea").val()
-				}, {merge: true})
-				.then(function() {
-				    console.log("Document successfully written!");
-				    $("button.save").html("Save");
-				})
-				.catch(function(error) {
-				    console.error("Error writing document: ", error);
-				});
+
 
 				// dynamodb.putItem(itemParams, function(err, data) {
 				// 	if (err) {

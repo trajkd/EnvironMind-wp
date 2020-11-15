@@ -1,7 +1,7 @@
 <nav id="menu" class="el-init el-show-complete">
   <div id="menu-bar" class="el-init el-show-complete" el-id="menu-bar" style="visibility: visible;">
     <a id="menu-bar__boffi-logo" href="/" internal-route="" style="">
-      <img src="/wp-content/themes/EnvironMind-wp/static/img/mindmates-logo.jpg" style="height: 20px; width: 20px">
+      <img src="/wp-content/themes/EnvironMind-wp/static/img/enel-e.jpeg" style="height: 20px; width: 20px">
     </a>
     <div id="hamburger-btn" class="" style="">
       <i class="fas fa-angle-up"></i>
@@ -71,7 +71,7 @@
                   <div id="menu-content__level-1-accordion" role="tablist" aria-multiselectable="true"><!-- BRAND BTN -->
                     <div class="card">
                       <div class="card-header" role="tab" id="headingTwo" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                        <a id="brand-btn" class="collapsed" href="/aboutmm">About&nbsp;&nbsp;<span class="MM">MM</span></a>
+                        <a id="brand-btn" class="collapsed" href="/aboutmm">About <span class="mirrored-e">E</span>M</a>
                       </div>
                     </div>
 <div class="card">
@@ -107,7 +107,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="/">
-          <span id="fulltitle">EnvironMind netWorking</span>
+          <span id="fulltitle">Open Innovability</span>
           <span class='tagline'>
             <span>
               <span class='bracket'>\([\)</span>
@@ -126,7 +126,7 @@
               <a href="/ideas/" data-menu-index="0" class="no-barba"><span class='hidden ideasFull Sketchyour'>Sketch&nbsp;your</span><span class="lighten Ideas">Ideas</span><span class='hidden ideasFull here'>&nbsp;here</span></a>
             </li>
             <li id="menu-item-24892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24892">
-              <a href="/mmnet/" data-menu-index="1" class="no-barba"><span class='hidden blogFull Inside'>Inside</span><span class="lighten MMnet"><span class="MM">MM</span>&nbsp;&nbsp;net</span><span class='hidden blogFull Working'>Working</span></a>
+              <a href="/mmnet/" data-menu-index="1" class="no-barba"><span class='hidden blogFull Inside'>Inside</span><span class="lighten MMnet">Open Innovability&nbsp;net</span><span class='hidden blogFull Working'>Working</span></a>
             </li>
             <li id="menu-item-24896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24896">
               <a href="/projects/" data-menu-index="2" class="no-barba"><span></span><span class="lighten Projects">Projects</span> <span class='hidden projectsFull todiscover'>to&nbsp;discover</span></a>

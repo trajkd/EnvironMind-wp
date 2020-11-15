@@ -38,7 +38,7 @@ h5,
 h6 {
   font-weight: 800;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #243e8e;
+  color: #41b9e6;
 }
 
 #main-content h1,
@@ -63,7 +63,7 @@ a {
 
 /* Change this for hover color of social buttons */
 a:focus, a:hover {
-  color: #77bb40;
+  color: #ff0f63;
 }
 
 blockquote {
@@ -973,11 +973,13 @@ ul.menu.safari {
 }
 
 .menu-item:hover .MM {
-  color: #243e8e;
+  /*color: #243e8e; */
+  color: #41b9e6;
 }
 
 .menu-item:hover .lighten {
-  color: #243e8e; 
+  /*color: #243e8e; */
+  color: #41b9e6;
 }
 
 #fulltitle {
@@ -1682,8 +1684,9 @@ ul.toc-box li:first-child {
 }
 
 @media only screen and (max-width: 499px) {
-#menu-top-central li a::before {
-  top: 1.5em;
+  #menu-top-central li a::before {
+    top: 1.5em;
+  }
 }
 
 .modal-popup {
@@ -1706,4 +1709,12 @@ ul.toc-box li:first-child {
   margin: 0 auto;
   font-family: 'BlairMdITC TT';
   font-size: 3vw;
+}
+
+.mirrored-e {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }

@@ -77,9 +77,9 @@
 
   function refactorBrand(w) {
     if (w.matches) {
-      $('.navbar-brand').html('<span>EnvironMind netWorking \\([ E = mc^2 ]\\)</span> <span class="tagline">Environment = mind collaboration²</span>');
+      $('.navbar-brand').html('<span>Open Innovability \\([ E = mc^2 ]\\)</span> <span class="tagline">Environment = mind collaboration²</span>');
     } else {
-      $('.navbar-brand').html("<span>EnvironMind netWorking</span><span class='tagline'><span><span class='bracket'>\\([\\)</span><span class='initial'>E</span><span class='hidden nameFull mpathy'>nvironment</span> <span>=</span> <span class='initial'>m</span><span class='hidden nameFull ind'>ind</span> <span class='initial'>c</span><span class='hidden nameFull reativity'>ollaboration</span><span>²</span><span class='bracket'>\\(]\\)</span></span></span>");
+      $('.navbar-brand').html("<span>Open Innovability</span><span class='tagline'><span><span class='bracket'>\\([\\)</span><span class='initial'>E</span><span class='hidden nameFull mpathy'>nvironment</span> <span>=</span> <span class='initial'>m</span><span class='hidden nameFull ind'>ind</span> <span class='initial'>c</span><span class='hidden nameFull reativity'>ollaboration</span><span>²</span><span class='bracket'>\\(]\\)</span></span></span>");
       $('.tagline').hover( 
         function() { $('.nameFull').removeClass('hidden'); },
         function() { $('.nameFull').addClass('hidden'); }

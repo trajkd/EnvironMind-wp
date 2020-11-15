@@ -41,14 +41,14 @@
         <link rel="stylesheet" type="text/css" href="/wp-content/themes/EnvironMind-wp/static/css/clean-blog.css">
         <style>
             :root {
-            --main-color-hue: 93;
-            --main-color-saturation: 49%;
-            --main-color-lightness: 49%;
+            --main-color-hue: 339;
+            --main-color-saturation: 100%;
+            --main-color-lightness: 53%;
             --title-font-family: Alata, serif;
             --text-font-family: Roboto, sans-serif;
             }
             .Ideas {
-                color: #243e8e;
+                color: #41b9e6;
             }
         </style>
         <meta name="title" content="<?php bloginfo( 'name' ) ?>">
