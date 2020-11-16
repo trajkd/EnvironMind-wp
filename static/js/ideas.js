@@ -90,7 +90,7 @@ db.ref("projects").once("value", function(snapshot) {
 				var imageBG = childData.ImageBG;
 			}
 		} else {
-			var imageBG = "https://img.youtube.com/vi/"+(childData.YoutubeBG).split('v=')[1]+"/maxresdefault.jpg";
+			var imageBG = "https://img.youtube.com/vi/"+(childData.YoutubeBG).split('v=')[1]+"/0.jpg";
 		}
 		var projectItem = `<div class="projects__list-item">
 						        <a class="projects-card" href="/projects/`+(childData.Title).toLowerCase().replace(/ /g, '-')+`">
@@ -164,7 +164,7 @@ db.ref("projects").once("value", function(snapshot) {
 // 					var imageBG = childData.ImageBG.S;
 // 				}
 // 			} else {
-// 				var imageBG = "https://img.youtube.com/vi/"+(childData.YoutubeBG.S).split('v=')[1]+"/maxresdefault.jpg";
+// 				var imageBG = "https://img.youtube.com/vi/"+(childData.YoutubeBG.S).split('v=')[1]+"/0.jpg";
 // 			}
 // 			var projectItem = `<div class="projects__list-item">
 // 							        <a class="projects-card" href="/projects/`+(childData.Title.S).toLowerCase().replace(/ /g, '-')+`">
