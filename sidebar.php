@@ -1,7 +1,7 @@
 <nav id="menu" class="el-init el-show-complete">
   <div id="menu-bar" class="el-init el-show-complete" el-id="menu-bar" style="visibility: visible;">
     <a id="menu-bar__boffi-logo" href="/" internal-route="" style="">
-      <img src="/wp-content/themes/MindEmpathy-wp/static/img/logo.jpg" style="height: 20px; width: 20px">
+      <img src="/wp-content/themes/EnvironMind-wp/static/img/logo.jpg" style="height: 20px; width: 20px">
     </a>
     <div id="hamburger-btn" class="" style="">
       <i class="fas fa-angle-up"></i>
