@@ -42,14 +42,14 @@
         <link rel="stylesheet" type="text/css" href="/wp-content/themes/EnvironMind-wp/static/css/idt-user-list.css">
         <style>
             :root {
-            --main-color-hue: 339;
-            --main-color-saturation: 100%;
-            --main-color-lightness: 53%;
+            --main-color-hue: 360;
+            --main-color-saturation: 60%;
+            --main-color-lightness: 50%;
             --title-font-family: Alata, serif;
             --text-font-family: Roboto, sans-serif;
             }
             .Ideas {
-            	color: #41b9e6;
+            	color: #ff0007;
             }
         </style>
         <meta name="title" content="<?php bloginfo( 'name' ) ?>">

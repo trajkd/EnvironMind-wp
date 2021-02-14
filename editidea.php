@@ -37,14 +37,14 @@ if ( !is_user_logged_in() ){ header( "Location: /member/login" ); die; } ?>
         <link rel="stylesheet" type="text/css" href="/wp-content/themes/EnvironMind-wp/static/css/idt-user-list.css">
         <style>
             :root {
-            --main-color-hue: 339;
-            --main-color-saturation: 100%;
-            --main-color-lightness: 53%;
+            --main-color-hue: 360;
+            --main-color-saturation: 60%;
+            --main-color-lightness: 50%;
             --title-font-family: Alata, serif;
             --text-font-family: Roboto, sans-serif;
             }
             .Ideas {
-            	color: #41b9e6;
+            	color: #ff0007;
             }
         </style>
         <meta name="title" content="<?php bloginfo( 'name' ) ?>">
@@ -713,7 +713,7 @@ if ( !is_user_logged_in() ){ header( "Location: /member/login" ); die; } ?>
 				                                    <div class="input-dropdown__input__container">
 				                                        <div name="label" class="input-dropdown__input div">
 				                                            <span >
-				                                            Student, Teacher or Parent
+				                                            Member, Partner or Investor
 				                                            </span> 
 				                                            <ul class="tag-list"> </ul>
 				                                            <div class="idt-icon">
@@ -729,44 +729,15 @@ if ( !is_user_logged_in() ){ header( "Location: /member/login" ); die; } ?>
 				                                    </div>
 				                                    <ul class="dropdown menu multiple vertical">
 				                                        <li><input type="checkbox" id="Student" class=""> <label for="Student" class="dropdown-pane__checkbox">
-				                                            Student
+				                                            Member
 				                                            </label>
 				                                        </li>
 				                                        <li><input type="checkbox" id="Teacher" class=""> <label for="Teacher" class="dropdown-pane__checkbox">
-				                                            Teacher
+				                                            Partner
 				                                            </label>
 				                                        </li>
 				                                        <li><input type="checkbox" id="Parent" class=""> <label for="Parent" class="dropdown-pane__checkbox">
-				                                            Parent
-				                                            </label>
-				                                        </li>
-				                                    </ul>
-				                                    <div class="dropdown-pane__header">
-				                                        Types
-				                                    </div>
-				                                    <ul class="dropdown menu multiple vertical">
-				                                        <li><input type="checkbox" id="creative-mind" class=""> <label for="creative-mind" class="dropdown-pane__checkbox">
-				                                            Creative mind
-				                                            </label>
-				                                        </li>
-				                                        <li><input type="checkbox" id="analytical-mind" class=""> <label for="analytical-mind" class="dropdown-pane__checkbox">
-				                                            Analytical mind
-				                                            </label>
-				                                        </li>
-				                                        <li><input type="checkbox" id="writing-mind" class=""> <label for="writing-mind" class="dropdown-pane__checkbox">
-				                                            Writing mind
-				                                            </label>
-				                                        </li>
-				                                        <li><input type="checkbox" id="designer-mind" class=""> <label for="designer-mind" class="dropdown-pane__checkbox">
-				                                            Designer mind
-				                                            </label>
-				                                        </li>
-				                                        <li><input type="checkbox" id="researcher-mind" class=""> <label for="researcher-mind" class="dropdown-pane__checkbox">
-				                                            Researcher mind
-				                                            </label>
-				                                        </li>
-				                                        <li><input type="checkbox" id="engineer-mind" class=""> <label for="engineer-mind" class="dropdown-pane__checkbox">
-				                                            Engineer mind
+				                                            Investor
 				                                            </label>
 				                                        </li>
 				                                    </ul>

@@ -1,4 +1,4 @@
-<?php /* Template Name: Inside MM net */ ?>
+<?php /* Template Name: Inside ME net */ ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php while ( have_posts() ) : the_post(); ?>

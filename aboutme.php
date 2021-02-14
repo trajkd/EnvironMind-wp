@@ -1,4 +1,4 @@
-<?php /* Template Name: About MM */ ?>
+<?php /* Template Name: About ME */ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +22,7 @@
 	<script src="/wp-content/themes/EnvironMind-wp/static/js/main.js"></script>
   <script src="https://kit.fontawesome.com/4c0b3ae1d6.js" crossorigin="anonymous"></script>
   <script src="/wp-content/themes/EnvironMind-wp/static/js/justifier.js"></script>
-	<title>About MM - <?php bloginfo( 'name' ) ?></title>
+	<title>About ME - <?php bloginfo( 'name' ) ?></title>
 </head>
 <body>
   <div id="sidebar-section-peripherial">
@@ -37,19 +37,19 @@
         </div>
       </div>
     </div> -->
-    <div id="aboutmm">
-      <div id="aboutmm-title">ABOUT <span class="MM redden-slides">MM</span></div>
-      <div id="aboutmm-location">
-        <span class="MM">MM</span>&nbsp; WAS CREATED FOR THE
+    <div id="aboutme">
+      <div id="aboutme-title">ABOUT <span class="ME redden-slides">ME</span></div>
+      <div id="aboutme-location">
+        <span class="ME">ME</span> NET IS BASED IN 
         <br>
-        <b>2020 HACKEREARTH HACKCCELERATE</b> 
+        <b>COLOGNY GENEVA SWITZERLAND</b> 
         <br>
-        BY TEAM MindMates
+        IN THE HEART OF AN INTERNATIONAL SOCIETY
       </div>
       <div id="spacing"></div>
-      <div id="aboutmm-aim">
+      <div id="aboutme-aim">
         <div>
-          <span class="MM">MM</span>&nbsp; AIMS TO SUPPORT 
+          <span class="ME">ME</span> NET AIMS TO SUPPORT 
         </div>
         <div>
         </div>
@@ -62,15 +62,15 @@
         <b>
           <ul>
             <li>INTERNET ACCESS NEEDS</li>
-            <li>DIRECT COLLABORATION AMONG STUDENTS</li>
-            <li>COMMUNICATION BETWEEN STUDENTS AND TEACHERS</li>
+            <li>COMMUNICATION IN THE MOTHER TONGUE</li>
             <li>CULTURAL DIVERSITY</li>
+            <li>DIRECT GLOBAL COLLABORATION</li>
           </ul>
         </b>
 
       </div>
-      <img id="aboutmm-logo" src="/wp-content/themes/EnvironMind-wp/static/img/mindmates-blue-logo.jpg">
-      <div id="aboutmm-idea">
+      <img id="aboutme-logo" src="/wp-content/themes/MindEmpathy-wp/static/img/logo-cash.jpeg">
+      <div id="aboutme-idea">
         <div>
         BORN WITH THE IDEA OF
         </div>
@@ -87,30 +87,31 @@
         <div>
           WHERE <b>CREATIVE PERSONALITIES</b> 
           <br>
-          CAN MEET THEIR CLASSMATES TO 
+          CAN MEET THE RIGHT PARTNER TO 
           <br>
-          <b>GROW THEIR INNOVATIVE TALENT</b>
+          <b>IMPLEMENT THEIR INNOVATIVE TALENT</b>
           <br>
           AND PUT IT INTO ACTION 
           <br>
           TO BRING IDEAS INTO REALITY
         </div>
       </div>
-      <div id="aboutmm-aplacewhere">
+      <div id="aboutme-aplacewhere">
         A PLACE WHERE
       </div>
-      <div id="aboutmm-investors">
+      <div id="aboutme-investors">
+        <span>I</span>
+        <span>N</span>
+        <span>V</span>
+        <span>E</span>
         <span>S</span>
         <span>T</span>
-        <span>U</span>
-        <span>D</span>
-        <span>E</span>
-        <span>N</span>
-        <span>T</span>
+        <span>O</span>
+        <span>R</span>
         <span>S</span>
       </div>
-      <div id="aboutmm-come">
-        COME TO GET WISER
+      <div id="aboutme-come">
+        COME TO GET INSPIRED
       </div>
     </div>
     <?php get_footer(); ?>

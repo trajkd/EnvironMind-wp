@@ -23,6 +23,7 @@
           scale: .8;
         }
     </style>
+</head>
 <body>
     <div id="sidebar-section-peripherial">
         <?php get_sidebar(); ?>

@@ -68,26 +68,6 @@ function separate_registration_form() {
 			<?php endif; ?>
 	                            <form class="form create account form-create-account form-register-customer woocommerce-form woocommerce-form-register register" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 	                            <?php do_action( 'woocommerce_register_form_start' ); ?>
-	                            	<div class="v-spacer-05">
-	                                    <div class="select" id="select-role-wrapper" data-ctrl="Select">
-	                                        <div class="selectric-wrapper selectric-select"><div class="selectric-hide-select"></div>
-		                                        <div id="select-role">
-		                                            <select id="selectric-role" name="role">
-														<option value="member"><?php esc_html_e( 'Member', 'woocommerce' ); ?></option>
-														<option value="partner"><?php esc_html_e( 'Partner', 'woocommerce' ); ?></option>
-														<option value="investor"><?php esc_html_e( 'Investor', 'woocommerce' ); ?></option>
-		                                            </select>
-		                                        </div>
-		                                    </div>
-	                                        <span class="select__label">
-	                                         <label data-ctrl-dom="label" class="select__floating-label" for="select-role"><?php esc_html_e( 'My profile', 'woocommerce' ); ?></label>
-	                                         ▾
-	                                         </span>
-	                                         <div class="select__error">
-	                                            <small id="architect-register-country-error"><?php esc_html_e( 'Specify your profile', 'woocommerce' ); ?></small>
-	                                        </div>
-	                                    </div>
-	                                </div>
 	                                <div class="v-spacer-05">
 	                                    <div class="form-group input-text   " data-ctrl="InputText">
 	                                        <input type="text" class="form-control input-text__input is--empty" aria-describedby="architect-register-name-error" data-ctrl-dom="input" name="billing_first_name" id="reg_billing_first_name" value="<?php if ( ! empty( $_POST['billing_first_name'] ) ) echo esc_html( $_POST['billing_first_name'] ); ?>" required="">
@@ -242,7 +222,7 @@ function separate_registration_form() {
 apply_filters( 'account_fields', array(
         'vat_id' => array(
             'type'        => 'text',
-            'label'       => __( 'Social Security Number', 'woocommerce' ),
+            'label'       => __( 'Tax Payer Identification Number (NPWP)', 'woocommerce' ),
             'placeholder' => __( 'XXX-XX-XXXX', 'woocommerce' ),
             'required'    => true,
         ),

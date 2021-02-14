@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'BlairMdITC TT';
-  src: url('/wp-content/themes/EnvironMind-wp/static/fonts/BlairMdITC-TT-Medium-Font.ttf') format('truetype');
+  src: url('/wp-content/themes/MindEmpathy-wp/static/fonts/BlairMdITC-TT-Medium-Font.ttf') format('truetype');
 }
 
 /*!
@@ -38,7 +38,7 @@ h5,
 h6 {
   font-weight: 800;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #41b9e6;
+  color: #ff0007;
 }
 
 #main-content h1,
@@ -63,7 +63,7 @@ a {
 
 /* Change this for hover color of social buttons */
 a:focus, a:hover {
-  color: #ff0f63;
+  color: #ff0007;
 }
 
 blockquote {
@@ -313,9 +313,9 @@ img::-moz-selection {
     -moz-transition: all 1s;
     -webkit-transition: all 1s;
   }
-  .mpathy { width: 124px; }
+  .mpathy { width: 80px; }
   .ind { width: 32px; }
-  .reativity { width: 131.2px; }
+  .reativity { width: 91.2px; }
   .navbar {
     padding: .5rem 0;
   }
@@ -342,21 +342,21 @@ a span {
   -moz-transition: all 0.4s;
   -webkit-transition: all 0.4s;
 }
-.Sketchyour { width: 260px; }
-.here { width: 130px; }
+.Your { width: 140px; }
+.arevalidones { width: 285px; }
 .Inside { width: 147px; }
 .Working { width: 180px; }
 .todiscover { width: 235px; }
 @media only screen and (max-width: 991px) {
-  .Sketchyour { width: 220px; }
-  .here { width: 90px; }
+  .Your { width: 100px; }
+  .arevalidones { width: 253px; }
   .Inside { width: 107px; }
   .Working { width: 145px; }
   .todiscover { width: 195px; }
 }
 @media only screen and (max-width: 500px) {
-  .Sketchyour { width: 150px; }
-  .here { width: 60px; }
+  .Your { width: 65px; }
+  .arevalidones { width: 168px; }
   .Inside { width: 75px; }
   .Working { width: 92px; }
   .todiscover { width: 129px; }
@@ -364,7 +364,7 @@ a span {
   .sub-menu.uppercase {
    font-size:14px;
   }
-  .MM {
+  .ME {
     letter-spacing: -5px;
     overflow: visible;
   }
@@ -972,21 +972,19 @@ ul.menu.safari {
   text-decoration: none;
 }
 
-.menu-item:hover .MM {
-  /*color: #243e8e; */
-  color: #41b9e6;
+.menu-item:hover .ME {
+  color: #ff0007;
 }
 
-.menu-item:hover .lighten {
-  /*color: #243e8e; */
-  color: #41b9e6;
+.menu-item:hover .lighten, .menu-item:hover .redden {
+  color: #ff0007;
 }
 
 #fulltitle {
   overflow: visible;
 }
 
-.lighten {
+.redden {
   overflow: visible;
 }
 
@@ -995,45 +993,33 @@ ul.menu.safari {
   margin-bottom: -5px;
 }
 
-.MM {
+.ME {
   letter-spacing: -9px;
   overflow: visible;
 }
 
-h1 .MM {
+h1 .ME {
   letter-spacing: -30px;
   overflow: visible;
 }
 
 @media only screen and (max-width: 449px) {
-  h1 .MM {
+  h1 .ME {
     letter-spacing: -19px;
     overflow: visible;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .menu-item .MM {
+  .menu-item .ME {
       letter-spacing: -5px;
       overflow: visible;
   }
 }
 
-.copyright .MM {
+.copyright .ME {
   letter-spacing: -4px;
   overflow: visible;
-}
-
-.card .MM {
-  letter-spacing: -0.9vw;
-  overflow: visible;
-}
-
-@media only screen and (max-width: 991px) {
-  .card .MM {
-    letter-spacing: -2.1vw;
-    overflow: visible;
-  }
 }
 
 ul.menu.horizontal li {
@@ -1271,7 +1257,7 @@ header.masthead {
 }
 
 .projects-grid .summary:hover, .projects-grid .summary:active, .projects-grid .summary:focus {
-  color: #243e8e;
+  color: #ff0007;
 }
 
 .projects-grid .display, .wiki-grid .display {
@@ -1398,12 +1384,12 @@ a.toc-item-link {
 }
 
 .wrap-toc .toc-box .toc-item-link:hover {
-  color: #243e8e;
+  color: #ff0007;
 }
 
 .wrap-toc .toc-box .toc-item.active .toc-item-link {
   margin-bottom: -35px;
-  color: #243e8e;
+  color: #ff0007;
 }
 
 .wrap-toc .toc-box .toc-item.deactivating .toc-item-link {
@@ -1415,7 +1401,7 @@ a.toc-item-link {
   position: relative;
   top: 7px;
   right: -88.3%;
-  color: #243e8e;
+  color: #ff0007;
   font-size: 50px;
   -webkit-animation: appear .2s forwards;
   -moz-animation:    appear .2s forwards;
@@ -1446,7 +1432,7 @@ a.toc-item-link {
   position: relative;
   top: 7px;
   right: -97%;
-  color: #243e8e;
+  color: #ff0007;
   font-size: 50px;
   -webkit-animation: disappear .2s normal;
   -moz-animation:    disappear .2s normal;
@@ -1541,44 +1527,44 @@ ul.toc-box li:first-child {
   display: none !important;
 }
 
-.histoire p .MM {
+.histoire p .ME {
   letter-spacing: -6px;
 }
 
-.histoire h2:first-child .MM {
+.histoire h2:first-child .ME {
   letter-spacing: -25px;
 }
 
-.histoire h2 .MM {
+.histoire h2 .ME {
   letter-spacing: -22px;
 }
 
-.histoire h3 .MM {
+.histoire h3 .ME {
   letter-spacing: -14px;
 }
 
-.toc-box .toc-H2 .MM {
+.toc-box .toc-H2 .ME {
   letter-spacing: -7px;
 }
 
-.toc-box .toc-H3 .MM {
+.toc-box .toc-H3 .ME {
   letter-spacing: -5px;
 }
 
 @media only screen and (max-width: 991px) {
-  .histoire p .MM {
+  .histoire p .ME {
     letter-spacing: -0.8vw;
   }
 
-  .histoire h2:first-child .MM {
+  .histoire h2:first-child .ME {
     letter-spacing: -2.5vw;
   }
 
-  .histoire h2 .MM {
+  .histoire h2 .ME {
     letter-spacing: -1.8vw;
   }
 
-  .histoire h3 .MM {
+  .histoire h3 .ME {
     letter-spacing: -1vw;
   }
 }
@@ -1684,9 +1670,8 @@ ul.toc-box li:first-child {
 }
 
 @media only screen and (max-width: 499px) {
-  #menu-top-central li a::before {
-    top: 1.5em;
-  }
+#menu-top-central li a::before {
+  top: 1.5em;
 }
 
 .modal-popup {
@@ -1709,12 +1694,4 @@ ul.toc-box li:first-child {
   margin: 0 auto;
   font-family: 'BlairMdITC TT';
   font-size: 3vw;
-}
-
-.mirrored-e {
-  -moz-transform: scale(-1, 1);
-  -webkit-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1);
 }

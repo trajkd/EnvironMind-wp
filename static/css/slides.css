@@ -131,37 +131,37 @@
   background-color: #f1f0e3;
 }
 
-#start-one-content-internal .content-internal-title .MM {
+#start-one-content-internal .content-internal-title .ME {
   font-family: 'BlairMdITC TT';
   overflow: visible;
   letter-spacing: -0.8vw;
 }
 
-#start-one-content-internal .content-internal-description .MM {
+#start-one-content-internal .content-internal-description .ME {
   font-family: 'BlairMdITC TT';
   overflow: visible;
   letter-spacing: -0.7vw;
 }
 
-#publish-two-content-internal .content-internal-description .MM {
+#publish-two-content-internal .content-internal-description .ME {
   font-family: 'BlairMdITC TT';
   overflow: visible;
   letter-spacing: -0.8vw;
 }
 
-#design-three-content-internal .content-internal-description .MM {
+#design-three-content-internal .content-internal-description .ME {
   font-family: 'BlairMdITC TT';
   overflow: visible;
   letter-spacing: -0.7vw;
 }
 
-#build-five-content-internal .content-internal-description .MM {
+#build-five-content-internal .content-internal-description .ME {
   font-family: 'BlairMdITC TT';
   overflow: visible;
   letter-spacing: -0.8vw;
 }
 
-#showcase-six-content-internal .content-internal-description .MM {
+#showcase-six-content-internal .content-internal-description .ME {
   font-family: 'BlairMdITC TT';
   overflow: visible;
   letter-spacing: -0.7vw;
@@ -190,7 +190,7 @@
   font-size: 3vw;
 }
 
-#mm-platform {
+#me-platform {
   font-family: 'BlairMdITC TT';
   font-size: 5vw;
   align-self: center;
@@ -198,7 +198,7 @@
   margin-left: 12px;
 }
 
-#mm-is-the-right-platform {
+#me-is-the-right-platform {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -209,7 +209,7 @@
   font-family: 'BlairMdITC TT';
 }
 
-#aboutmm {
+#aboutme {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -221,13 +221,13 @@
   line-height: 1.2;
 }
 
-#aboutmm-aim .MM {
+#aboutme-aim .ME {
   font-family: 'BlairMdITC TT';
-  letter-spacing: -10.7px;
+  letter-spacing: -0.7vw;
 }
 
 @media only screen and (min-width: 992px) {
-  #aboutmm {
+  #aboutme {
     margin-top: 200px;
     margin-left: 96px;
   }
@@ -236,25 +236,25 @@
   }
 }
 
-#aboutmm-title {
-  font-size: 5vw;
+#aboutme-title {
+  font-size: 6vw;
   align-self: end;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   padding-left: 10px;
 }
 
-#aboutmm-title .MM {
+#aboutme-title .ME {
   font-family: 'BlairMdITC TT';
-  letter-spacing: -1.8vw;
+  letter-spacing: -2.1vw;
 }
 
-#aboutmm-location .MM {
+#aboutme-location .ME {
   font-family: 'BlairMdITC TT';
   letter-spacing: -0.7vw;
   padding-bottom: 10px;
 }
 
-#aboutmm-aim {
+#aboutme-aim {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -262,20 +262,20 @@
   padding-right: 10px;
 }
 
-#aboutmm-idea {
+#aboutme-idea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-left: 10px;
 }
 
-#aboutmm-aplacewhere {
+#aboutme-aplacewhere {
   justify-self: end;
   align-self: center;
   padding-right: 2vw;
 }
 
-#aboutmm-investors {
+#aboutme-investors {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 4vw;
@@ -283,12 +283,12 @@
   justify-content: space-between;
 }
 
-#aboutmm-come {
+#aboutme-come {
   justify-self: start;
   align-self: center;
   padding-left: 2vw;
 }
 
 .redden-slides {
-  color: #243e8e;
+  color: #ff0007;
 }

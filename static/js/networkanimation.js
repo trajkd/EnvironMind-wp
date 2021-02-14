@@ -359,7 +359,7 @@
 		this.ctx.setTransform(2, 0, 0, 2, 0, 0);
     };
 
-    var labels = ["Agriculture", "Architecture", "Blockchain", "Brand", "Children", "Culture", "Digital", "Education", "Energy", "Entertainment", "Ethics", "Fashion", "Film", "Finance", "Food&Beverage", "Government", "Health", "Home", "Manufacturing", "Miscellaneous", "Mobility", "Music", "Retail", "Science", "Services", "Sport", "Technology", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    var labels = ["digital", "ethics", "projects", "partnership", "blockchain", "architecture", "technology", "", "", "", "", "", "", "", ""];
 
     var linkXY = {};
     var linkWidths = {};
@@ -463,7 +463,7 @@
 			if ((this.label+this.copy === hoveringCopy)) {
 				this.ctx.font = 35+(this.radius-4)*5+10+"px BlairMdITC TT";
 				linkWidths[this.label] = this.ctx.measureText(this.label).width;
-				this.ctx.fillStyle = '#ff0f63';
+				this.ctx.fillStyle = '#ff0007';
 		    }
 	    }
 	    this.ctx.fillText(this.label, this.x+5, this.y-5);
@@ -523,7 +523,7 @@
 			density: 15000, // the lower the denser
 			netLineDistance: 200,
 			netLineColor: '#868e96',
-			particleColors: ['#ff0f63'] // ['#6D4E5C', '#aaa', '#FFC458' ]
+			particleColors: ['#db0000'] // ['#6D4E5C', '#aaa', '#FFC458' ]
 		};
 		this.canvas = parent.canvas;
 		this.ctx = parent.ctx;
